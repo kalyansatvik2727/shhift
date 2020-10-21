@@ -35,7 +35,7 @@ describe('Sell or Trade Cars Page Test', () => {
     cy.get('button span')
       .contains('Get')
       .click();
-
+      //comment
       cy.get('div[id*=Pick] span',{timeout:100000}).eq(0).invoke('text').then((dollar)=>{
         cy.log(dollar)
         const value = utils.splitDollar(dollar)
