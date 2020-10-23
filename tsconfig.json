@@ -2,7 +2,7 @@
     "compilerOptions": {
         "baseUrl": "../node_modules",
         "types": [
-            "cypress"
+            "nodes","cypress","cypress-react-selector"
         ]
     },
     "include": [

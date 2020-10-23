@@ -7,11 +7,11 @@ class FinancingPage{
     cy.get('button span',{timeout: 50000}).contains('Get Started').click()
   }
 
-  public enterEmail(email) {
+  public enterEmail(email:string) {
     cy.get('#email',{timeout: 50000}).should('be.visible').type(email)
   }
 
-  public enterPassword(password) {
+  public enterPassword(password:string) {
     cy.get('#password',{timeout: 50000}).type(password)
   }
 
@@ -19,19 +19,19 @@ class FinancingPage{
     cy.get('#terms_terms',{timeout: 50000}).check()
   }
 
-  public enterRentOrMortgage(amount) {
-    cy.get('#MonthlyDebt', {timeout: 50000}).should('be.visible').type(amount, {delay:100})
+  public enterRentOrMortgage(amount:string) {
+    cy.get('#MonthlyDebt', {timeout: 50000}).should('be.visible').type(amount, {delay:50})
   }
 
-  public enterIncome(income) {
-    cy.get('#Income',{timeout: 50000}).should('be.visible').type(income, {delay:100})
+  public enterIncome(income:string) {
+    cy.get('#Income',{timeout: 50000}).should('be.visible').type(income, {delay:50})
   }
 
   public selectYear() {
     cy.get('button p',{timeout: 50000}).contains('Year').click()
   }
 
-  public enterCreditScore(score) {
+  public enterCreditScore(score:string) {
     cy.get('#CreditScore',{timeout: 50000}).should('be.visible').type(score, {delay:100})
   }
 

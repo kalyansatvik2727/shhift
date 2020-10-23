@@ -32,6 +32,8 @@ const hiw_h3 = 'Finance your favorite one';
 const hiw_p3 = 'Apply for an official loan from our network of trusted lenders either online or on your test drive.';
 
 describe('Pre-qualified flow', () => {
+  before(()=>{
+  })
   it('Launch Pre-qualify finance page', () => {
     cy.visit(
       'https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl'
@@ -85,7 +87,7 @@ describe('Pre-qualified flow', () => {
   })
   
   it('Enter email', () => {
-    cy.get('button[class*=close]',{timeout:100000}).eq(0).should('be.visible').click()
+    //cy.get('button[class*=close]',{timeout:100000}).eq(0).should('be.visible').click()
     financing.enterEmail('umar.mohammad+' + randomNumber + '@shift.com');
   });
 
@@ -103,7 +105,7 @@ describe('Pre-qualified flow', () => {
 
   it('Enter Rent or Mortgage', () => {
     
-    financing.enterRentOrMortgage(1000);
+    financing.enterRentOrMortgage('1000');
   });
 
   it('Click on Continue', () => {
@@ -112,7 +114,7 @@ describe('Pre-qualified flow', () => {
 
   it('Enter Total income', () => {
     
-    financing.enterIncome(100000);
+    financing.enterIncome('100000');
   })
 
   it('Select Year', () => {
@@ -124,7 +126,7 @@ describe('Pre-qualified flow', () => {
   })
 
   it('Enter Credit Score', () => {
-    financing.enterCreditScore(800);
+    financing.enterCreditScore('800');
   })
 
   it('Click on Continue', () => {
@@ -143,18 +145,18 @@ describe('Pre-qualified flow', () => {
     cy.wait(5000)
   })
 
-  it('Validate Dollar Value',()=>{
-    cy.get('div[class=DecisionDisplaySection__value]',{timeout:100000}).eq(0).invoke('text').then((dollar)=>{
-      cy.wrap(utils.splitDollar(dollar)).then((value)=>{
-        if(value!>0){
-          cy.log('Invalid borrow amount displayed')
-        }else{
-          cy.log('borrow amount is greater than zero: '+value)
-        }
-      })
+  // it('Validate Dollar Value',()=>{
+  //   cy.get('div[class=DecisionDisplaySection__value]',{timeout:100000}).eq(0).invoke('text').then((dollar)=>{
+  //     cy.wrap(utils.splitDollar(dollar)).then((value)=>{
+  //       if(value!>0){
+  //         cy.log('Invalid borrow amount displayed')
+  //       }else{
+  //         cy.log('borrow amount is greater than zero: '+value)
+  //       }
+  //     })
   
-    })
+  //   })
     
-  })
+  // })
 
 });

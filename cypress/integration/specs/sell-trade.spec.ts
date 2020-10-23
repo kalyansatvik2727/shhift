@@ -9,7 +9,7 @@ const utils = new Utilities()
 describe('Sell or Trade Cars Page Test', () => {
 
   before(()=>{
-    cy.clearCookies()
+    
   })
 
   it.only('launch shift', () => {
