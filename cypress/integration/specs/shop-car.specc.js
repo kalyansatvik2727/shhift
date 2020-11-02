@@ -39,7 +39,7 @@ describe('Shop Cars Page Test', () => {
     cy.get('div[class*=Dropdown__options] li').contains('Cadillac').click()
     
     shopCarPage.clickOnCarDetails();
-    cy.get('div[class*=CarProfilePage] a[class*=Link]',{timeout:100000}).eq(3).should('be.visible').click()
+    cy.get('div[class*=CarProfilePage__leader-nav] a',{timeout:100000}).eq(3).should('be.visible').click()
     //cy.get('a div',{timeout:100000}).contains('Test drive').should('be.visible').click()
     cy.pause()
   });

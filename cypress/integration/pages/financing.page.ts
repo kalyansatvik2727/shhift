@@ -3,8 +3,8 @@ class FinancingPage{
     cy.get('button[class*=big]',{timeout: 50000}).eq(0).click()
   }
 
-  public clickOnGetStartedButton() {
-    cy.get('button span',{timeout: 50000}).contains('Get Started').click()
+  public clickOnGetStartedButton(text:string) {
+    cy.get('button span',{timeout: 50000}).contains(text).click()
   }
 
   public enterEmail(email:string) {
@@ -20,11 +20,11 @@ class FinancingPage{
   }
 
   public enterRentOrMortgage(amount:string) {
-    cy.get('#MonthlyDebt', {timeout: 50000}).should('be.visible').type(amount, {delay:50})
+    cy.get('#MonthlyDebt', {timeout: 50000}).should('be.visible').type(amount, {delay:100})
   }
 
   public enterIncome(income:string) {
-    cy.get('#Income',{timeout: 50000}).should('be.visible').type(income, {delay:50})
+    cy.get('#Income',{timeout: 50000}).should('be.visible').type(income, {delay:100})
   }
 
   public selectYear() {

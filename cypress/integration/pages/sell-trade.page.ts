@@ -15,9 +15,15 @@ class SellTradePage {
     cy.get('select[name="Model"]').select(model);
   }
 
-  public clickEstimateButton() {
+  public clickEstimateButton(text: string) {
     cy.get('button')
       .contains('Get my estimate')
+      .click();
+  }
+
+  public clickGetMyOfferButton(text: string) {
+    cy.get('button span')
+      .contains(text)
       .click();
   }
 
@@ -107,9 +113,9 @@ class SellTradePage {
     cy.get(`button[name="smokedIn"][value="${smoker}"]`).click();
   }
 
-  public clickGetEstimateButton() {
+  public clickGetEstimateButton(text:string) {
     cy.get('button')
-      .contains('Get my estimate')
+      .contains(text)
       .click();
   }
   public checkEstimateFlowComplete(text: string) {

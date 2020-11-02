@@ -32,8 +32,6 @@ const hiw_h3 = 'Finance your favorite one';
 const hiw_p3 = 'Apply for an official loan from our network of trusted lenders either online or on your test drive.';
 
 describe('Pre-qualified flow', () => {
-  before(()=>{
-  })
   it('Launch Pre-qualify finance page', () => {
     cy.visit(
       'https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl'
@@ -83,11 +81,10 @@ describe('Pre-qualified flow', () => {
   });
 
   it('Click on Get Started button', () => {
-    financing.clickOnGetStartedButton();
+    financing.clickOnGetStartedButton('Get Started');
   })
   
   it('Enter email', () => {
-    //cy.get('button[class*=close]',{timeout:100000}).eq(0).should('be.visible').click()
     financing.enterEmail('umar.mohammad+' + randomNumber + '@shift.com');
   });
 
@@ -100,7 +97,7 @@ describe('Pre-qualified flow', () => {
   });
 
   it('Click on Continue', () => {
-    actions.clickOnContinue();
+    actions.clickOnContinue('Continue');
   });
 
   it('Enter Rent or Mortgage', () => {
@@ -109,7 +106,7 @@ describe('Pre-qualified flow', () => {
   });
 
   it('Click on Continue', () => {
-    actions.clickOnContinue();
+    actions.clickOnContinue('Continue');
   });
 
   it('Enter Total income', () => {
@@ -122,7 +119,7 @@ describe('Pre-qualified flow', () => {
   })
 
   it('Click on Continue', () => {
-    actions.clickOnContinue();
+    actions.clickOnContinue('Continue');
   })
 
   it('Enter Credit Score', () => {
@@ -130,19 +127,15 @@ describe('Pre-qualified flow', () => {
   })
 
   it('Click on Continue', () => {
-    actions.clickOnContinue();
+    actions.clickOnContinue('Continue');
   })
 
-  it('Check I Agree Checkbox', () => {
-    
+  it('Check I Agree Checkbox', () => {    
     financing.checkAgreeTermsCheckBox();
   })
 
   it('Click on Continue', () => {
-    cy.get('span')
-    .contains('Continue')
-    .click({force:true});
-    cy.wait(5000)
+    actions.clickOnContinue('Continue');
   })
 
   // it('Validate Dollar Value',()=>{

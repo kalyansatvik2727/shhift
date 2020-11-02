@@ -1,68 +1,68 @@
 class ShopCarPage {
-  public launchShopCarsURL() {
+  launchShopCarsURL() {
     cy.visit('https://shift.com/cars/oregon');
     //cy.waitForReact();
   }
 
-  public enterZipcode(zipcode:string) {
+  enterZipcode(zipcode) {
     cy.get('input[type=tel]', { timeout: 10000 })
       .clear()
       .type(zipcode);
   }
 
-  public enterEmail(email:string) {
+   enterEmail(email) {
     cy.get('input#email', { timeout: 50000 })
       .should('be.visible')
       .type(email);
   }
 
-  public clickBodyStyleDropdown() {
+   clickBodyStyleDropdown() {
     cy.get('p')
       .contains('Bodystyle')
       .click();
   }
-  public enterMake(make: string) {
+   enterMake(make) {
     cy.get('#Make', { timeout: 10000 })
       .type(make);
     // cy.get('p.TypographyParagraph__root').click({ multiple: false });
   }
 
-  public selectModel() {
+   selectModel() {
     cy.get('p.TypographyParagraph__root').click();
   }
 
-  public enterModel(model: string) {
+   enterModel(model) {
     cy.get('[id="Model"]')
       .click()
       .type(model);
   }
 
-  public clickCarType(carType: string) {
+   clickCarType(carType) {
     cy.get('p')
       .contains(carType)
       .click();
   }
 
-  public clickOnCarDetails() {
+   clickOnCarDetails() {
     cy.get('.CarBrowserListSection__body div')
       .first()
       .click();
   }
 
-  public checkCarDetailsShown() {
+   checkCarDetailsShown() {
     cy.get('h1 span').should('be.exist');
   }
 
-  public buyItNow() {
+   buyItNow() {
     cy.get('[id="VDPBuyOnlineTabScreenerId"]').click();
   }
 
-  public clickBuyOnlineNowCTA() {
+   clickBuyOnlineNowCTA() {
     cy.get('button')
       .contains('Buy online now')
       .click();
   }
-  public checkDetailsPageShown(text: string) {
+   checkDetailsPageShown(text) {
     cy.get('h3')
       .contains(text)
       .should('be.exist');

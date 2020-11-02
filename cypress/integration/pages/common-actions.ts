@@ -1,7 +1,7 @@
 class CommonActions {
-  public clickOnContinue() {
+  public clickOnContinue(text: string) {
     cy.get('button span')
-      .contains('Continue')
+      .contains(text)
       .click();
   }
 
