@@ -38,9 +38,6 @@ describe('Financing Car', () => {
     cy.get('h3',{timeout:50000}).contains('How it works').should('be.visible')
   })
 
-  it.skip('Validate text available How it works - 1, 2 & 3 points',()=>{
-    cy.get('h6',{timeout:50000}).eq(0).should('eq',hiw_h1)
-  })
 
   it('Validate How it works text - Step 1 text',()=>{
     cy.get('div',{timeout:50000}).contains('Step 1').should('be.visible')
