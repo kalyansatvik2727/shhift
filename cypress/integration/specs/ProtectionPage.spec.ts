@@ -138,12 +138,12 @@ describe('Shift | Protection page',()=>{
         })
 
         //Gap Coverage header validation
-        cy.get('h3',{timeout:100000}).eq(3).invoke('text').then((text)=>{
+        cy.get('div[class=WarrantyPage__gap-content] >div > div:nth-child(1)',{timeout:100000}).eq(0).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Gap coverage')
         })
 
         //Gap Coverage header validation
-        cy.get('h2',{timeout:100000}).eq(3).invoke('text').then((text)=>{
+        cy.get('div[class=WarrantyPage__gap-content] >div > div:nth-child(2)',{timeout:100000}).eq(0).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Never owe more than your car is worth')
         })
 

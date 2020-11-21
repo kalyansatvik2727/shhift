@@ -103,7 +103,7 @@ describe('Shift | Certified page',()=>{
         })
 
         cy.get('button span',{timeout:100000}).invoke('text').then((text)=>{
-            cy.wrap(text).should('eq','Browse Cars')
+            cy.wrap(text).should('eq','Browse cars')
         })
     })
 })
