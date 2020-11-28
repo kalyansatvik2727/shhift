@@ -23,3 +23,65 @@
 // enter post code: 94112
 // click on Place $250 deposit button
 // you should see error message: Your card was declined. Your request was in live mode, but used a known test card.
+import Utilities from '../pages/utilities'
+const utils = new Utilities()
+const randomNumber = utils.randomNumber();
+
+
+describe('Shift | Buy it now page',()=>{
+    it('Buy it now page validations',()=>{
+        cy.visit('https://shift.com/car/2011-silver-honda-pilot/c101531')
+
+        //select any car
+        //cy.get('a img',{timeout:100000}).eq(1).click()
+
+        //let carPrice=''
+
+        cy.get('div[class*=CarProfilePage] div span',{timeout:100000}).eq(1).invoke('text').then((text)=>{
+            const carPrice = cy.wrap(text)
+            
+        })
+        //cy.log(carPrice)
+        cy.get('button span',{timeout:100000}).contains('Buy online now').click()
+
+        cy.get('h3',{timeout:100000}).eq(0).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Buy this Honda today!Don’t forget to take advantage of $600 off on Vehicle Protection Plans! Ask your Purchase Advisor about available plans.')
+            
+        })
+
+        cy.get('h6',{timeout:100000}).eq(0).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Place a deposit to hold your car')
+            
+        })
+
+        cy.get('p[class*=Typography__root--bluishgray]',{timeout:100000}).eq(1).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Deposits are non-refundable and will go toward your purchase.')
+            
+        })
+
+        cy.get('h6',{timeout:100000}).eq(1).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Finalize payment over the phone')
+            
+        })
+
+        cy.get('p[class*=Typography__root--bluishgray]',{timeout:100000}).eq(2).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Your Purchase Advisor will reach out to set up payment and review next steps. If you’re interested in financing, we can help with that, too.')
+            
+        })
+
+        cy.get('h6',{timeout:100000}).eq(2).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Delivered to your door')
+            
+        })
+
+        // cy.get('p[class*=Typography__root--bluishgray]',{timeout:100000}).eq(3).invoke('text').then((text)=>{
+        //     cy.wrap(text).should('contain','Your vehicle should arrive in 7-10 days, and every Shift vehicle comes with our free 7-day return policy.')
+            
+        // })
+
+        cy.get('#ModelFormInput__firstName').type('John',{force:true})
+        cy.get('#ModelFormInput__lastName').type('Smith')
+        cy.get('#ModelFormInput__email').type('umar.mohammad+' + randomNumber + '@shift.com')
+
+    })
+})
