@@ -45,7 +45,7 @@ describe('Shift | Buy it now page',()=>{
         cy.get('button span',{timeout:100000}).contains('Buy online now').click()
 
         cy.get('h3',{timeout:100000}).eq(0).invoke('text').then((text)=>{
-            cy.wrap(text).should('contain','Buy this Honda today!Don’t forget to take advantage of $600 off on Vehicle Protection Plans! Ask your Purchase Advisor about available plans.')
+            cy.wrap(text).should('contain','Buy this Honda today!')
             
         })
 
@@ -79,9 +79,30 @@ describe('Shift | Buy it now page',()=>{
             
         // })
 
-        cy.get('#ModelFormInput__firstName').type('John',{force:true})
-        cy.get('#ModelFormInput__lastName').type('Smith')
-        cy.get('#ModelFormInput__email').type('umar.mohammad+' + randomNumber + '@shift.com')
-
+        cy.get('#ModelFormInput__firstName').type('John',{force:true,delay: 100 })
+        cy.get('#ModelFormInput__lastName').type('Smith',{force:true,delay: 100})
+        cy.get('div[class*=AccountInformation__form] input[id=ModelFormInput__email]').type('umar.mohammad+' + randomNumber + '@shift.com',{force:true,delay: 100})
+        cy.get('div[class*=AccountInformation__form] input[id=ModelFormInput__phone]').type('7017012345',{force:true,delay: 100})
+        cy.get('#shipping-address').type('2525 16th Street, San Francisco, CA, USA',{force:true,delay: 100})
+        cy.wait(2000)
+        cy.get('ol li').eq(4).click()
+        cy.get('#name').type('Test Test',{force:true,delay: 100})
+        cy.wait(3000)
+        // document.get
+        // document.getElementsByClassName("CardField-number-fakeNumber").
+        
+        // .setAttribute('aria-hidden', 'false');
+        //cy.get('div[class*=CardNumberField] input[name=cardnumber]').type('4242 4242 4242 4242')
+        // cy.get('form[class="ElementsApp is-empty"]').within(()=>{
+        //     cy.get('#root > form > div > div.CardField-input-wrapper.is-ready-to-slide > span.CardField-number.CardField-child > span.CardField-number-fakeNumber > span.CardField-number-fakeNumber-number').type('4242 4242 4242 4242',{force:true, delay: 100})
+        // })
+        cy.get('iframe[title*="Secure card payment"]').its('0.contentDocument.body').find('div[class*=CardNumberField] input[name=cardnumber]').type('4242 4242 4242 4242')
+        cy.get('iframe[title*="Secure card payment"]').its('0.contentDocument.body').find('span[class*=CardField-expiry] input').type('04 24')
+        cy.get('iframe[title*="Secure card payment"]').its('0.contentDocument.body').find('span[class*=CardField-cvc] input').type('424')
+        cy.get('iframe[title*="Secure card payment"]').its('0.contentDocument.body').find('span[class*=CardField-postalCode] input').type('94112')
+        cy.get('button[class*=CardForm__submit]').click()
+        cy.get('.Input__error').invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Your card was declined. Your request was in live mode, but used a known test card.')
+        })   
     })
 })
