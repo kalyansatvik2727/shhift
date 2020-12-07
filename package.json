@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "single": "node_modules/.bin/cypress run --headed --spec 'cypress\\integration\\specs\\buy-it-now-flow.spec.ts' --browser chrome"
+    "single": "node_modules/.bin/cypress run --headed --spec 'cypress\\integration\\specs\\creditApplicationFlow.spec.ts' --browser chrome --no-exit"
   },
   "author": "",
   "license": "ISC",

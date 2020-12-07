@@ -20,16 +20,16 @@
 // Assert that the car selected in above step is shown at the top left of the page and that it matches
 // Assert left menu items are shown: 
 
-YOUR LOAN TERMS
-Loan
-Gap Coverage
-Protection Plan
-YOUR APPLICATION
-Personal
-Housing
-Income
-Legal
-Review
+// YOUR LOAN TERMS
+// Loan
+// Gap Coverage
+// Protection Plan
+// YOUR APPLICATION
+// Personal
+// Housing
+// Income
+// Legal
+// Review
 
 // Assert header: Choose your loan terms
 //hover on trade in quesiton mark circle and assert the text matches
@@ -80,6 +80,64 @@ Review
 // assert the Button Apply for loan is present and displayed
 
 // DO NOT CLICK ON APPLY FOR LOAN BUTTON AS THIS IS PROD.
+import Utilities from '../pages/utilities'
+const utils = new Utilities()
+const randomNumber = utils.randomNumber();
+
+describe('Shift | Credit Application Flow',()=>{
+    it('Credit Application Flow validations',()=>{
+        cy.visit('https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl')
+
+        // cy.get('div[class*=CarProfilePage] div span',{timeout:100000}).eq(1).invoke('text').then((text)=>{
+        //     const carPrice = cy.wrap(text)
+            
+        // })
+        //click on Get Started
+        cy.get('button[class*=FinancingPrequalificationScreen]',{timeout:50000}).click()
+        //enter email
+        cy.get('#email',{timeout:50000}).type('umar.mohammad+' + randomNumber + '@shift.com')
+        //enter phone
+        cy.get('#phone',{timeout:50000}).type('3759874567')
+        //enter password
+        cy.get('#password',{timeout:50000}).type('test123#')
+        //check I agree checkbox
+        cy.get('#terms_terms').check()
+        //click on Continue
+        cy.get('button[class*=AccountFormContainer]').click()
+        //enter rent or mortgage
+        cy.get('#MonthlyDebt').type('1000')
+        //click on Continue
+        cy.get('button[class*=FinancingPrequalificationScreen]').click()
+        //enter total income
+        cy.get('#Income').type('150000')
+        //click on year
+        cy.get('div[class*=PrequalIncomeInput] button').eq(0).click()
+        //click on Continue
+        cy.get('button[class*=FinancingPrequalificationScreen]').click()
+        //enter credit score
+        cy.get('#CreditScore').type('799')
+        //click on Continue
+        cy.get('button[class*=FinancingPrequalificationScreen]').click()
+        cy.wait(5000)
+        //check I agree checkbox
+        cy.get('#AgreeToTerms_AgreedToTerms').check()
+        //click on Continue
+        cy.get('button[class*=FinancingPrequalificationScreen]').click()
+        //assert success message
+        cy.get('h3 div',{timeout:50000}).invoke('text').then((text)=>{
+            cy.wrap(text).should('contain','Congrats!You’re pre-qualified.')
+        })
+        //click on Shop with my terms
+        cy.get('button[class*=GenericApprovalBody]').click()
+        //select any car
+        cy.get('div[class*=CarBrowserListSection] a',{timeout:50000}).eq(0).click()
+        //click on apply finance link
+        cy.get('div[class*=CarProfilePage__leader-nav] a',{timeout:50000}).contains('Apply for financing').click({force:true})
+
+
+
+    })
+})
 
 
 
