@@ -132,7 +132,89 @@ describe('Shift | Credit Application Flow',()=>{
         //select any car
         cy.get('div[class*=CarBrowserListSection] a',{timeout:50000}).eq(0).click()
         //click on apply finance link
-        cy.get('div[class*=CarProfilePage__leader-nav] a',{timeout:50000}).contains('Apply for financing').click({force:true})
+        //cy.get('div[class*=CarProfilePage__leader-nav] a',{timeout:50000}).contains('Apply for financing').click({force:true})
+
+        cy.visit('https://shift.com/apply-to-finance?pid=fpub10pdX9pby3UqEZGiRWGPo')
+
+        //click on Get Started button]
+        cy.get('button[class*=FinancingCreditEducation]').click()
+
+        //assert the side bar headers
+        //Your Loan terms
+        cy.get('div[class*=FinancingSidebar] div div').eq(0).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Your Loan Terms')
+        })
+
+        //Loan
+        cy.get('div[class*=FinancingSidebar] div li span').eq(0).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Loan')
+        })
+
+        //Gap Coverage
+        cy.get('div[class*=FinancingSidebar] div li span').eq(1).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Gap Coverage')
+        })
+
+        //Protection Plan
+        cy.get('div[class*=FinancingSidebar] div li span').eq(2).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Protection Plan')
+        })
+
+        //Your Loan terms
+        cy.get('div[class*=FinancingSidebar] div div').eq(1).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Your Application')
+        })
+
+        //Personal
+        cy.get('div[class*=FinancingSidebar] div li span').eq(3).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Personal')
+        })
+
+        //Housing
+        cy.get('div[class*=FinancingSidebar] div li span').eq(4).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Housing')
+        })
+
+        //Income
+        cy.get('div[class*=FinancingSidebar] div li span').eq(5).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Income')
+        })
+
+        //Legal
+        cy.get('div[class*=FinancingSidebar] div li span').eq(6).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Legal')
+        })
+
+        //Review
+        cy.get('div[class*=FinancingSidebar] div li span').eq(7).invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Review')
+        })
+
+         //Choose your plan terms
+         cy.get('h1[class=FinancingForm__section-title]').invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Choose your loan terms')
+        })
+
+        //mouse hover
+        cy.get('a[class*=FinancingLoanForm__link]').click()
+
+        //assert mouse hover text
+        cy.get('div[class=FinancingForm__tooltip-content]').invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'If you have a trade-in vehicle, continue this application as if you didn’t. We’ll apply your trade-in credit later on in the process.')
+        })
+
+        //enter down payment
+        cy.get('input[id=ModelFormInput__downPaymentCents]').clear().type('18000',{delay:100})
+
+        //select loan length
+        cy.get('a[class=chosen-single]').click()
+        cy.get('li[class=active-result]').eq(1).click({force:true})
+
+        //click on continue with the terms
+        cy.get('button[class*=FinancingForm__button]').click()
+
+
+
 
 
 
