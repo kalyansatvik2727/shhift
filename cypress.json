@@ -4,5 +4,7 @@
     "viewportWidth": 1440,
     "pageLoadTimeout": 100000,
     "video": false,
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+    "restartBrowserBetweenSpecFiles": true,
+    "ignoreTestFiles": "*._spec.js"
 }

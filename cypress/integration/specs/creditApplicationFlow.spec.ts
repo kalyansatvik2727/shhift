@@ -208,10 +208,15 @@ describe('Shift | Credit Application Flow',()=>{
 
         //select loan length
         cy.get('a[class=chosen-single]').click()
-        cy.get('li[class=active-result]').eq(1).click({force:true})
+        //cy.get('li[class=active-result]').eq(1).click({force:true})
 
         //click on continue with the terms
         cy.get('button[class*=FinancingForm__button]').click()
+
+        //assert Protect your purchase text
+        cy.get('div[class*=AddOnEducationScreen__subheading]').invoke('text').then((text)=>{
+            cy.wrap(text).should('eq', 'Safeguard yourself from the unexpected costs of car ownership. Adding protection to your financed total makes it easy and affordable to get the peace of mind you need. Shift offers:')
+        })
 
 
 
