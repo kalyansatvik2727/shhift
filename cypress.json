@@ -6,5 +6,6 @@
     "video": false,
     "chromeWebSecurity": false,
     "restartBrowserBetweenSpecFiles": true,
-    "ignoreTestFiles": "*._spec.js"
+    "ignoreTestFiles": "*._spec.js",
+    "integrationFolder":"cypress/integration/specs"
 }
