@@ -111,7 +111,7 @@ describe('Shift | Engineering page',()=>{
         })
 
         //our stack text 
-        cy.get('div p',{timeout:50000}).eq(1).invoke('text').then((text)=>{
+        cy.get('section div p',{timeout:50000}).eq(0).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Challenging the status quo means we need every advantage we can get. This is our toolkit for building great software.')
         })
 
@@ -126,7 +126,7 @@ describe('Shift | Engineering page',()=>{
         })
 
         //Read about our experiences
-        cy.get('a span',{timeout:50000}).eq(12).invoke('text').then((text)=>{
+        cy.get('div > a > span',{timeout:50000}).eq(0).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Read about our experiences')
         })
         cy.get('a[target=_blank]').eq(7).should('have.attr','href','https://blog.shift.com/')
@@ -137,7 +137,7 @@ describe('Shift | Engineering page',()=>{
         })
 
         //join us text
-        cy.get('div[class*=ContentWidth__root] p',{timeout:50000}).eq(3).invoke('text').then((text)=>{
+        cy.get('section div p',{timeout:50000}).eq(1).invoke('text').then((text)=>{
             cy.wrap(text).should('contain','We’ve accomplished a lot with a small and talented team, but there’s more to be done.')
         })
 
