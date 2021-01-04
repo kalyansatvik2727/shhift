@@ -9,11 +9,11 @@ describe('Shift | Car Loan Calculator page',()=>{
         cy.visit('https://shift.com/car-loan-calculator')
 
         
-        cy.get('h1[class*=Typo]',{timeout:100000}).invoke('text').then((text)=>{
+        cy.get('h1[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','How much can I afford?')
         })
 
-        cy.get('h5[class*=Typo]',{timeout:100000}).invoke('text').then((text)=>{
+        cy.get('h5[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Estimate monthly payment or maximum car price with a loan calculator')
         })
 

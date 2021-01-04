@@ -13,24 +13,24 @@ describe('Shift | About page',()=>{
         cy.visit('https://shift.com/about')
 
         //our mission validation
-        cy.get('h2[class*=Typo]',{timeout:100000}).invoke('text').then((text)=>{
+        cy.get('h2[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Our mission is to make car purchase and ownership simple.')
         })
 
         //what drives us validation
-        cy.get('h1[class*=Typo]',{timeout:100000}).invoke('text').then((text)=>{
+        cy.get('h1[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','What Drives Us')
         })
 
         //what drives us - text validation
-        cy.get('p div',{timeout:100000}).invoke('text').then((text)=>{
+        cy.get('p div',{timeout:72000}).invoke('text').then((text)=>{
             //cy.log('text: '+text)
             //cy.log('wrap: '+cy.wrap(text))
             cy.wrap(text).should('eq','We are building the platform to make buying and selling cars fun, fair, and accessible to everyone.')
         })
 
         //validate execute team text
-        cy.get('h3[class*=Typo]',{timeout:100000}).eq(0).invoke('text').then((text)=>{
+        cy.get('h3[class*=Typo]',{timeout:72000}).eq(0).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Executive team')
         })
 
@@ -131,7 +131,7 @@ describe('Shift | About page',()=>{
         cy.get('#Explorations').click({force:true})
 
         //validate execute team text
-        cy.get('h3[class*=Typo]',{timeout:100000}).eq(1).invoke('text').then((text)=>{
+        cy.get('h3[class*=Typo]',{timeout:72000}).eq(1).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Latest Press Releases')
         })
 
@@ -169,7 +169,7 @@ describe('Shift | About page',()=>{
         })
 
         //In the news Section
-        cy.get('h3[class*=Typo]',{timeout:100000}).eq(2).invoke('text').then((text)=>{
+        cy.get('h3[class*=Typo]',{timeout:72000}).eq(2).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','In the news')
         })
 
@@ -184,7 +184,7 @@ describe('Shift | About page',()=>{
         cy.get('img[alt="Entrepreneur"]').should('be.visible')
 
         //In the news Section
-        cy.get('h3[class*=Typo]',{timeout:100000}).eq(3).invoke('text').then((text)=>{
+        cy.get('h3[class*=Typo]',{timeout:72000}).eq(3).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Investors')
         })
 

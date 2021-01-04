@@ -88,7 +88,7 @@ describe('Shift | Credit Application Flow',()=>{
     it('Credit Application Flow validations',()=>{
         cy.visit('https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl')
 
-        // cy.get('div[class*=CarProfilePage] div span',{timeout:100000}).eq(1).invoke('text').then((text)=>{
+        // cy.get('div[class*=CarProfilePage] div span',{timeout:72000}).eq(1).invoke('text').then((text)=>{
         //     const carPrice = cy.wrap(text)
             
         // })
