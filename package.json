@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "single": "node_modules/.bin/cypress run --headed --spec 'cypress\\integration\\specs\\prequalifiedflow.spec.ts' --browser chrome --no-exit"
+    "single": "node_modules/.bin/cypress run --headed --spec 'cypress\\integration\\specs\\AboutPage.spec.ts' --browser chrome --no-exit"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "5.0.0",
     "cypress-react-selector": "2.2.0",
+    "cypress-social-logins": "^1.9.2",
     "typescript": "^3.2.1"
   }
 }

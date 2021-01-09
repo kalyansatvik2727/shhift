@@ -87,7 +87,7 @@ describe('Shift | About page',()=>{
         cy.get('.ProfileGrid__team-profile button').eq(8).click()
         //validate designation
         cy.get('.ProfileGrid__team-profile span').eq(4).invoke('text').then((text)=>{
-            cy.wrap(text).should('eq','Co-founder and CTO')
+            cy.wrap(text).should('eq','Co-founder')
         })
         //validate the dialog
         cy.get('.ProfileGrid__team-profile div > img').eq(8).should('have.attr','alt','Christian Ohler')
