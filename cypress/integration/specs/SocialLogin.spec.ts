@@ -1,16 +1,21 @@
 describe('Login', () => {
     it('Login through Google', () => {
-      const username = Cypress.env('googleSocialLoginUsername')
-      const password = Cypress.env('googleSocialLoginPassword')
-      const loginUrl = Cypress.env('loginUrl')
-      const cookieName = Cypress.env('cookieName')
+      // const username = Cypress.env('test@test.com')
+      // const password = Cypress.env('test123')
+      // const loginUrl = Cypress.env('https://shift-training1.a.shiftdev.io/')
+      const username = 'test-buyer@shift.com'
+      const password = 'forensic-mildew-coif-proper'
+      const loginUrl = 'https://shift-training1.a.shiftdev.io/'
+      //const cookieName = Cypress.env('cookieName')
+      //const cookieName = 'cookieName'
       const socialLoginOptions = {
         username: username,
         password: password,
         loginUrl: loginUrl,
-        headless: true,
+        headless: false,
         logs: false,
-        loginSelector: '[href="/auth/auth0/google-oauth2"]',
+        //loginSelector: '[href="/auth/auth0/google-oauth2"]',
+        loginSelector: '[href*="google"]',
         postLoginSelector: '.account-panel'
       }
   
