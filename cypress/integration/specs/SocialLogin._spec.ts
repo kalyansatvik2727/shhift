@@ -1,5 +1,7 @@
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 describe('Login', () => {
-    it('Login through Google', () => {
+    it.skip('Login through Google', () => {
       // const username = Cypress.env('test@test.com')
       // const password = Cypress.env('test123')
       // const loginUrl = Cypress.env('https://shift-training1.a.shiftdev.io/')
@@ -37,5 +39,9 @@ describe('Login', () => {
           })
         }
       })
+    })
+
+    it('Google login', () => {
+      commonActions.googleLogin()
     })
   })

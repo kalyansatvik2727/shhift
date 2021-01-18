@@ -1,4 +1,9 @@
 {
+    "env": {
+        "loginUrl": "https://shift-training1.a.shiftdev.io/",
+        "username": "test-buyer@shift.com",
+        "password": "forensic-mildew-coif-proper"
+      },
     "defaultCommandTimeout": 30000,
     "viewportHeight": 900,
     "viewportWidth": 1440,
