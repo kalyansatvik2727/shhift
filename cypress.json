@@ -1,8 +1,10 @@
 {
-    "env": {
-        "loginUrl": "https://shift-training1.a.shiftdev.io/",
+  "baseUrl": "https://forcebase1.a.shiftdev.io/",
+  "userAgent": "",
+    "env": {        
         "username": "test-buyer@shift.com",
-        "password": "forensic-mildew-coif-proper"
+        "password": "forensic-mildew-coif-proper",
+        "token":""
       },
     "defaultCommandTimeout": 30000,
     "viewportHeight": 900,

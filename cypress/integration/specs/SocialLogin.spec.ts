@@ -41,7 +41,7 @@ describe('Login', () => {
       })
     })
 
-    it('Google login', () => {
+    it.only('Google login', () => {
       commonActions.googleLogin()
     })
   })

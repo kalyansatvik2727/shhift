@@ -7,15 +7,17 @@
 //Verify the link in the press release section
 
 //I know you asked for specific things but there is not much in this page. Verify and assert whatever you can
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 
 describe('Shift | About page',()=>{
+    before(()=>{
+        commonActions.login('/about')
+    })
     it('About page validations',()=>{
-        cy.visit('https://shift.com/about')
-
+        
         //our mission validation
-        cy.get('h2[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
-            cy.wrap(text).should('eq','Our mission is to make car purchase and ownership simple.')
-        })
+        cy.get('h2').contains('Our mission is to make car purchase and ownership simple').should('be.visible')
 
         //what drives us validation
         cy.get('h1[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
@@ -135,13 +137,13 @@ describe('Shift | About page',()=>{
             cy.wrap(text).should('eq','Latest Press Releases')
         })
 
-        //links validation
-        cy.get('div[id*=latest-press-releases] a[href*=Support]').should('be.visible').invoke('text').then((text)=>{
-            cy.wrap(text).should('eq','Shift Completes Merger with Insurance Acquisition Corp. on its Path to Public Listing, Transaction Delivers $340 Million to Support Growth and Working Capital')
-        })
+        // //links validation
+        // cy.get('div[id*=latest-press-releases] a[href*=Support]').should('be.visible').invoke('text').then((text)=>{
+        //     cy.wrap(text).should('eq','Shift Completes Merger with Insurance Acquisition Corp. on its Path to Public Listing, Transaction Delivers $340 Million to Support Growth and Working Capital')
+        // })
 
-        //investors link
-        cy.get('div[id*=latest-press-releases] a[href*=investors]').should('be.visible')
+        // //investors link
+        // cy.get('div[id*=latest-press-releases] a[href*=investors]').should('be.visible')
 
         //essential worker program
         cy.get('div[id*=latest-press-releases] a[href*=essential]').should('be.visible').invoke('text').then((text)=>{
@@ -176,7 +178,7 @@ describe('Shift | About page',()=>{
         cy.get('img[alt="Time Magazine"]').should('be.visible')
         cy.get('img[alt="LA Times"]').should('be.visible')
         cy.get('img[alt="The Wall Street Journal"]').should('be.visible')
-        cy.get('img[data-src*=NewYorkTimes').should('be.visible')
+        cy.get('img[alt="Wall Street Journal"').should('be.visible')
         cy.get('img[alt="Tech Crunch"]').should('be.visible')
         cy.get('img[alt="CNBC"]').should('be.visible')
         cy.get('img[alt="Inc."]').should('be.visible')
@@ -193,8 +195,8 @@ describe('Shift | About page',()=>{
         cy.get('img[alt="Goldman Sachs"]').should('be.visible')
         cy.get('img[alt="BMW i Ventures"]').should('be.visible')
         cy.get('img[alt="G2VP"]').should('be.visible')
-        cy.get('img[data-src*=dcm]').should('be.visible')
-        cy.get('img[data-src*=Renault]').should('be.visible')
+        // cy.get('img[alt=dcm]').should('be.visible')
+        // cy.get('img[data-src*=Renault]').should('be.visible')
         
     })
 })
