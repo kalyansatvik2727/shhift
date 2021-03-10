@@ -3,7 +3,7 @@ class CommonActions{
         cy.visit('/admin/devops/crypto/refresh_token_login');
         var token = Cypress.env('token');
 
-        cy.get('input[name=auth_token]').type(token);
+        cy.get('input[name=auth_token]').type(token,{log:false});
         cy.get('form').submit();
 
         // TODO to speed up subsequent tests, you should save the cookie value

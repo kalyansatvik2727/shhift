@@ -12,6 +12,7 @@ const commonActions = new CommonActions()
 
 describe('Shift | About page',()=>{
     before(()=>{
+        
         commonActions.login('/about')
     })
     it('About page validations',()=>{
