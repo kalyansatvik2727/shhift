@@ -1,6 +1,8 @@
+const trainingUrl = 'https://forcebase1.a.shiftdev.io'
+const liveUrl = 'https://shift.com'
 class CommonActions{
     login(relativeUrl){
-        cy.visit('/admin/devops/crypto/refresh_token_login');
+        cy.visit(Cypress.env('baseUrl')+'/admin/devops/crypto/refresh_token_login');
         var token = Cypress.env('token');
 
         cy.get('input[name=auth_token]').type(token,{log:false});
@@ -9,7 +11,20 @@ class CommonActions{
         // TODO to speed up subsequent tests, you should save the cookie value
         // and then reuse it other tests in the same run.
 
-        cy.visit(relativeUrl);
+        cy.visit(Cypress.env('baseUrl')+relativeUrl);
+    }
+
+    envLogin(relativeUrl){
+        if(Cypress.env('baseUrl')!==trainingUrl){
+            cy.log(Cypress.env('baseUrl'))
+            cy.log(liveUrl)
+            cy.visit(Cypress.env('baseUrl')+relativeUrl)
+        }else if(Cypress.env('baseUrl')===trainingUrl){
+            cy.log(Cypress.env('baseUrl'))
+            cy.log(trainingUrl)
+            this.login(relativeUrl)
+        }
+
     }
 
 }

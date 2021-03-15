@@ -11,11 +11,11 @@ import CommonActions from '../../support/CommonActions'
 const commonActions = new CommonActions()
 
 describe('Shift | About page',()=>{
-    before(()=>{
+    before(()=>{        
         
-        commonActions.login('/about')
     })
     it('About page validations',()=>{
+        commonActions.envLogin('/about')
         
         //our mission validation
         cy.get('h2').contains('Our mission is to make car purchase and ownership simple').should('be.visible')
