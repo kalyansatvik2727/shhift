@@ -15,6 +15,8 @@
 import Financing from '../pages/financing.page'
 import Actions from '../pages/common-actions'
 import Utilities from '../pages/utilities'
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 
 const financing = new Financing()
 const actions = new Actions()
@@ -32,10 +34,14 @@ const hiw_h3 = 'Finance your favorite one';
 const hiw_p3 = 'Apply for an official loan from our network of trusted lenders either online or on your test drive.';
 
 describe('Pre-qualified flow', () => {
+  before(()=>{
+    commonActions.envLogin('/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl')
+  })
+  
   it('Launch Pre-qualify finance page', () => {
-    cy.visit(
-      'https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl'
-    )
+    // cy.visit(
+    //   'https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl'
+    // )
   })
 
   it('Check - How it works text', () => {
@@ -138,18 +144,18 @@ describe('Pre-qualified flow', () => {
     actions.clickOnContinue('Continue');
   })
 
-  // it('Validate Dollar Value',()=>{
-  //   cy.get('div[class=DecisionDisplaySection__value]',{timeout:100000}).eq(0).invoke('text').then((dollar)=>{
-  //     cy.wrap(utils.splitDollar(dollar)).then((value)=>{
-  //       if(value!>0){
-  //         cy.log('Invalid borrow amount displayed')
-  //       }else{
-  //         cy.log('borrow amount is greater than zero: '+value)
-  //       }
-  //     })
+  it('Validate Dollar Value',()=>{
+    cy.get('div[class=DecisionDisplaySection__value]',{timeout:100000}).eq(0).invoke('text').then((dollar)=>{
+      cy.wrap(utils.splitDollar(dollar)).then((value)=>{
+        if(parseInt(value)<=0){
+          cy.log('Invalid borrow amount displayed')
+        }else{
+          cy.log('borrow amount is greater than zero: '+value)
+        }
+      })
   
-  //   })
+    })
     
-  // })
+  })
 
 });

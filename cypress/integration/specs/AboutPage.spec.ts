@@ -12,10 +12,10 @@ const commonActions = new CommonActions()
 
 describe('Shift | About page',()=>{
     before(()=>{        
-        
+        commonActions.envLogin('/about')
     })
     it('About page validations',()=>{
-        commonActions.envLogin('/about')
+        
         
         //our mission validation
         cy.get('h2').contains('Our mission is to make car purchase and ownership simple').should('be.visible')

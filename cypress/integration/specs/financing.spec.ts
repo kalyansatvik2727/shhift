@@ -8,13 +8,13 @@
 //- Check that Get Pre quailifed cta in the bottom is clickable and navigates user to this url "https://shift.com/prequalify-for-financing" when clicked
 
 import Financing from '../pages/financing.page'
-import Actions from '../pages/common-actions'
-
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 const financing = new Financing()
 
 
 const hiw_h1 = 'Get pre-qualified without penalty'
-const hiw_p1 = 'Apply in a few minutes to see your estimated terms.'
+const hiw_p1 = 'Check what you can afford without impacting your credit score.Get pre-qualified'
 
 const hiw_h2 = 'Discover cars in your budget'
 const hiw_p2 = 'See what your monthly payment and terms would be for each car.'
@@ -24,14 +24,13 @@ const hiw_p3 = 'Apply for financing online to get an official loan from our netw
 
 
 describe('Financing Car', () => {
-
-  it('Launch SHIFT-financing page',()=>{
-    cy.visit('https://shift.com/finance');
+  before(()=>{
+    commonActions.envLogin('/finance')
   })
 
+
   it('Verify Get Pre-qualified button',()=>{
-    cy.get('button span',{timeout: 50000}).contains('Get pre-qualified').should('be.visible')
-    //financing.clickOnGetPreQualifiedButton()
+    cy.get('button span[class=Button__content]').contains('Get pre-qualified').should('be.visible')
   })
 
   it('Check - How it works text',()=>{
@@ -44,7 +43,8 @@ describe('Financing Car', () => {
     
     cy.get('h4').eq(0).invoke('text').should('eq',hiw_h1)
 
-    cy.get('p span a').invoke('text').should('eq', 'Get pre-qualified')
+    // cy.get('.how-it-works-columns > :nth-child(1) > .how-it-works-step > .how-it-works-text > p > a').invoke('text').should('eq', 'Get pre-qualified')
+    cy.get('p span').eq(0).invoke('text').should('eq', hiw_p1)
     
   })
 
@@ -80,7 +80,7 @@ describe('Financing Car', () => {
   })
 
   it('Validate Learn more',()=>{
-    cy.get('a button span',{timeout:50000}).contains('Learn more').should('be.visible')
+    cy.get('a button span').contains('Learn more').should('be.visible')
     
     
   })

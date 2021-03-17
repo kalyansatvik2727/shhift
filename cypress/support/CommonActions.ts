@@ -16,12 +16,12 @@ class CommonActions{
 
     envLogin(relativeUrl){
         if(Cypress.env('baseUrl')!==trainingUrl){
-            cy.log(Cypress.env('baseUrl'))
-            cy.log(liveUrl)
+            // cy.log(Cypress.env('baseUrl'))
+            // cy.log(liveUrl)
             cy.visit(Cypress.env('baseUrl')+relativeUrl)
         }else if(Cypress.env('baseUrl')===trainingUrl){
-            cy.log(Cypress.env('baseUrl'))
-            cy.log(trainingUrl)
+            // cy.log(Cypress.env('baseUrl'))
+            // cy.log(trainingUrl)
             this.login(relativeUrl)
         }
 

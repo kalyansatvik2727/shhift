@@ -3,11 +3,14 @@
 // Check all header text and text
 // Check that all buttons can be clicked 
 //Check the bottom two buttons are dispalyed and clickable
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 
 describe('Shift | Car Loan Calculator page',()=>{
+    before(()=>{
+        commonActions.envLogin('/car-loan-calculator')
+    })
     it('About page validations',()=>{
-        cy.visit('https://shift.com/car-loan-calculator')
-
         
         cy.get('h1[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','How much can I afford?')

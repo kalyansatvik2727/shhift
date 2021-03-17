@@ -20,10 +20,14 @@ You’ll have backup from our dedicated Support Teams. Have questions? They’re
 //assert that the photo logo is clickable and the feedback text above it changes 
 // assert the FAQ header
 //assert that 8 questions can be clicked, expanded and assert the text in each question*/
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 
 describe('Shift | Concierges page',()=>{
+    before(()=>{
+        commonActions.envLogin('/concierges')
+    })
     it('Concierges page validations',()=>{
-        cy.visit('https://shift.com/concierges')
 
         //concierges header validation
         cy.get('h1[class*=Typo]',{timeout:72000}).invoke('text').then((text)=>{

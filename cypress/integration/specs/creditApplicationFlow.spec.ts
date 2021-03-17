@@ -81,17 +81,30 @@
 
 // DO NOT CLICK ON APPLY FOR LOAN BUTTON AS THIS IS PROD.
 import Utilities from '../pages/utilities'
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 const utils = new Utilities()
+
 const randomNumber = utils.randomNumber();
 
 describe('Shift | Credit Application Flow',()=>{
+    before(()=>{
+        
+        commonActions.envLogin('/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl')
+    })
+    after(()=>{
+        cy.clearCookies()
+        cy.clearLocalStorage()
+    })
+
     it('Credit Application Flow validations',()=>{
-        cy.visit('https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl')
+        // cy.visit('https://shift.com/prequalify-for-financing?&financing.prequalificationClearerCommunicationVariation=PrequalificationClearerCommunicationVariationControl')
 
         // cy.get('div[class*=CarProfilePage] div span',{timeout:72000}).eq(1).invoke('text').then((text)=>{
         //     const carPrice = cy.wrap(text)
             
         // })
+        
         //click on Get Started
         cy.get('button[class*=FinancingPrequalificationScreen]',{timeout:50000}).click()
         //enter email
@@ -116,6 +129,7 @@ describe('Shift | Credit Application Flow',()=>{
         cy.get('button[class*=FinancingPrequalificationScreen]').click()
         //enter credit score
         cy.get('#CreditScore').type('799')
+        cy.wait(3000)
         //click on Continue
         cy.get('button[class*=FinancingPrequalificationScreen]').click()
         cy.wait(5000)
@@ -217,11 +231,6 @@ describe('Shift | Credit Application Flow',()=>{
         cy.get('div[class*=AddOnEducationScreen__subheading]').invoke('text').then((text)=>{
             cy.wrap(text).should('eq', 'Safeguard yourself from the unexpected costs of car ownership. Adding protection to your financed total makes it easy and affordable to get the peace of mind you need. Shift offers:')
         })
-
-
-
-
-
 
     })
 })

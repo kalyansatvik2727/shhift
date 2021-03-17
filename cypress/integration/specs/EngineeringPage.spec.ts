@@ -14,30 +14,15 @@
 // asssert the button read our experiences is displayed and clickable
 //assert the header Join us and text under it
 // assert the header Engineering, Product, and Design and text under it
+import CommonActions from '../../support/CommonActions'
+const commonActions = new CommonActions()
 
 describe('Shift | Engineering page',()=>{
+    before(()=>{
+        commonActions.envLogin('/engineering')
+    })
     it('Engineering page validations',()=>{
-        cy.visit('https://shift.com/engineering')
 
-        // cy.get('section > div > div > div > div > div').each((el,index)=>{
-        //    const text = el.text() 
-        //    console.log(text)   
-        //    if(text.trim()==='Engineering @ Shift'){
-        //     //text.trim() === 'Engineering @ Shift'
-        //     return false
-        //     }     
-        //     // cy.wrap(el).invoke('text').then((text)=>{
-        //     //     cy.log(text)
-        //     //     if(text.trim()==="Engineering @ Shift"){
-        //     //         //text.trim() === 'Engineering @ Shift'
-        //     //         return false
-        //     //     }
-        //     // }).then(()=>{
-        //     //     cy.log('Engineering @ Shift is not found')
-        //     // })
-        // })
-
-        //cy.pause()
         //Engineering header validation
         cy.get('section > div > div > div > div > div',{timeout:50000}).eq(0).invoke('text').then((text)=>{
             cy.wrap(text).should('eq','Engineering @ Shift')
