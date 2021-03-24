@@ -1,12 +1,3 @@
-//- navigate to https://shift.com/finance
-//- Check that Get Pre qualified cta is present
-//- Check that How it works section text is present
-//- assert that the step 1,2 & 3 text is present and matches with expected text
-//- Check that Get Pre qualified link in step 1 is clickable
-//- Check Protect your purchase section text and asset it
-//- Check that Learn more Cta is present
-//- Check that Get Pre quailifed cta in the bottom is clickable and navigates user to this url "https://shift.com/prequalify-for-financing" when clicked
-
 import Financing from '../pages/financing.page'
 import CommonActions from '../../support/CommonActions'
 const commonActions = new CommonActions()
@@ -84,7 +75,4 @@ describe('Financing Car', () => {
     
     
   })
-
- 
-
 })
