@@ -20,10 +20,38 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
 }
 
-const {GoogleSocialLogin} = require('cypress-social-logins').plugins
+const { GoogleSocialLogin } = require('cypress-social-logins').plugins
 
 module.exports = (on, config) => {
   on('task', {
     GoogleSocialLogin: GoogleSocialLogin
   })
 }
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}
+
+// const wp = require('@cypress/webpack-preprocessor')
+
+// module.exports = (on) => {
+//   const options = {
+//     webpackOptions: {
+//       resolve: {
+//         extensions: [".ts", ".tsx", ".js"]
+//       },
+//       module: {
+//         rules: [
+//           {
+//             test: /\.tsx?$/,
+//             loader: "ts-loader",
+//             options: { transpileOnly: true }
+//           }
+//         ]
+//       }
+//     },
+//   }
+//   on('file:preprocessor', wp(options))
+// }

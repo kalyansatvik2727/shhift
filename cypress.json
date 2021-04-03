@@ -6,6 +6,7 @@
     "password": "forensic-mildew-coif-proper",
     "token": "dvat1.ck1st.ibDltNof4gYfLqIq-kikk4EwH-mWTIHOG4xR7P9p1-9hdVMcr9O821l4Sbx_83CgYttSm2ELeQ_3zN19bxdeGR1l1_6rmOyZfju97q9s2pQTqBvqqyX3mWhknhH6u6E9u2C99gW4xBbfbI0VZOTX1dnUNFRyg4EhhgS_LpHisChsV8ggjh9-deBzOH4mocXAJNOrL0A3DQoER-Ezf05Y_SHF2qkSnCdmrWvDhBZONacMm1ShgDRX2Cxx8soOVBZYMLNsN1RlWbvf7ZMHm12uRVjuzlHOfsGOTgih9vKuGjH1smlSgPrk-2UuMnwFBNfj4gZdwPfzbj2z..1"
   },
+  "testFiles": "**/*.feature",
   "defaultCommandTimeout": 30000,
   "viewportHeight": 900,
   "viewportWidth": 1440,
@@ -14,5 +15,5 @@
   "chromeWebSecurity": false,
   "restartBrowserBetweenSpecFiles": true,
   "ignoreTestFiles": "*._spec.ts",
-  "integrationFolder": "cypress/integration/specs"
+  "integrationFolder": "cypress/integration/"
 }
