@@ -2,7 +2,7 @@ Feature: Shift | Certified Page
 
         Certified Page Automation
         Scenario: Validate Certified Page
-                Given I navigate to Page with required login
+                Given I navigate to Certified Page with required login
                 Then I validate shift certified section
                 And I validate Whats included in Shifts Certification? section
                 And I validate Not every car becomes Shift Certified section

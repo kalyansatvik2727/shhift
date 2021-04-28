@@ -2,7 +2,7 @@ Feature: Shift | Car Finder Page
 
     Car Finder Page Automation
     Scenario: Validate Car Finder Page
-        Given I navigate to Page with required login
+        Given I navigate to Car Finder Page with required login
         And I click on car finder menu button
         And I validate landing page text
         And I click on start car finder button

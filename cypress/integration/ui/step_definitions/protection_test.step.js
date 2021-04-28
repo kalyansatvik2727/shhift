@@ -1,10 +1,9 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import CommonActions from '../../support/CommonActions'
-
+import CommonActions from '../pages/CommonActions'
 const commonActions = new CommonActions()
 //const pageActions = page.actions
 
-Given('I navigate to Page with required login', () => {
+Given('I navigate to Protection Page with required login', () => {
     commonActions.envLogin('/protection')
 })
 

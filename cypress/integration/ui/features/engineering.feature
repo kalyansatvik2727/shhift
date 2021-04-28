@@ -2,7 +2,7 @@ Feature: Shift | Engineering Page
 
         Engineering Page Automation
         Scenario: Validate Engineering Page
-                Given I navigate to Page with required login
+                Given I navigate to Engineering Page with required login
                 Then I validate Engineering @ Shift section
                 And I validate Marketplace & consumer products section
                 And I validate Logistics platforms section

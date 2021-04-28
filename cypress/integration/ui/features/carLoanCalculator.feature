@@ -2,7 +2,7 @@ Feature: Shift | Car Loan Calculator Page
 
         Car Loan Calculator Page Automation
         Scenario: Validate Car Loan Calculator Page
-                Given I navigate to Page with required login
+                Given I navigate to Car Loan Calculator Page with required login
                 When I validate landing page text
                 And I validate Credit score Estimated APR section
                 And I validate Loan Length section
