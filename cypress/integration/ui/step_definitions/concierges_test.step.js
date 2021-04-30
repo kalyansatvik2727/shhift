@@ -8,7 +8,7 @@ Given('I navigate to Concierges Page with required login', () => {
     commonActions.envLogin('/concierges')
 })
 
-Then('I validate landing page text', () => {
+Then('I validate Concierges landing page text', () => {
     //concierges header validation
     cy.get('h1[class*=Typo]', { timeout: 72000 }).invoke('text').then((text) => {
         cy.wrap(text).should('eq', 'Concierges & Drivers')

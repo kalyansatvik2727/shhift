@@ -8,7 +8,7 @@ Given('I navigate to Car Loan Calculator Page with required login', () => {
     commonActions.envLogin('/car-loan-calculator')
 })
 
-When('I validate landing page text', () => {
+When('I validate Car Loan Calculator landing page text', () => {
     pageActions.validateHeader1()
     pageActions.validateHeader2()
 })

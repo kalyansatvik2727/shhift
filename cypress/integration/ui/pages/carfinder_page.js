@@ -1,8 +1,9 @@
+
 const page = {
     elements: {
         monthlyPaymentLabel: '[for*="Monthly payment"]',
-        monthlyPaymentInput: 'input[name=car_finder_input_price]'
-
+        monthlyPaymentInput: 'input[name=car_finder_input_price]',
+        emailInput: 'form input[name="Email Input"]',
 
     },
     actions: {
@@ -23,6 +24,16 @@ const page = {
         },
         enterMonthlyPayment(value) {
             cy.get(page.elements.monthlyPaymentInput, { timeout: 50000 }).clear().type(value)
+        },
+        enterEmail(value) {
+            cy.get(page.elements.emailInput, { timeout: 50000 }).should('be.visible').type(value)
+        },
+        clickOnSeeMyCarsButton() {
+            cy.contains('See my cars').click()
+        },
+        clickOnViewCompleteDetails() {
+            cy.wait(5000)
+            cy.contains('View complete details', { timeout: 50000 }).should('be.visible').click()
         }
     }
 }

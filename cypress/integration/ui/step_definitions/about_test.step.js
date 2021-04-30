@@ -5,7 +5,7 @@ Given('I navigate to About Page with required login', () => {
     commonActions.envLogin('/about')
 })
 
-When('I validate landing page text', () => {
+When('I validate About landing page text', () => {
     //our mission validation
     cy.get('h2').contains('Our mission is to make car purchase and ownership simple').should('be.visible')
 
