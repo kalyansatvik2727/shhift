@@ -1,0 +1,3 @@
+{
+    "cuke_step_definition_file_path": "cypress/integrations/step_definitions/stepDefinition.js"
+}
