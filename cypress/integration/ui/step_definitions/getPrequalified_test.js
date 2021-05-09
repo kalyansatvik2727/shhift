@@ -1,84 +1,92 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import CommonActions from '../pages/CommonActions'
 import Utilities from '../pages/utilities'
-const page = require('../pages/carfinder_page')
+const page = require('../pages/getPrequalified_page')
+const pageActions = page.actions
 
 const commonActions = new CommonActions()
 const util = new Utilities()
-const email = 'umar.mohammad'+util.randomNumber+'@shift.com'
+const email = 'umar.mohammad' + util.randomNumber() + '@shift.com'
+const password = 'Test123#'
 
 Given(/^I navigate to Finance Page with required login$/, () => {
-	return true;
+	//commonActions.envLogin('/finance')
+	cy.visit('https://shift.com/finance')
 });
 
 And(/^I click on Get pre-qualified button$/, () => {
-	return true;
+
+	pageActions.clickOnGetPreQualifiedButton()
 });
 
 And(/^I validate Intro page$/, () => {
-	return true;
+	pageActions.validateIntroPageText()
 });
 
 And(/^I click on Get my terms button$/, () => {
-	return true;
+	pageActions.clickOnGetMyTermsButton()
+
 });
 
 And(/^I enter Email$/, () => {
-	return true;
+	cy.visit('https://shift.com/prequalify-for-financing/account')
+	pageActions.enterEmail(email)
 });
 
 And(/^I enter Phone Number$/, () => {
-	return true;
+	pageActions.enterPhoneNumber('7077071234')
 });
 
 And(/^I enter password$/, () => {
-	return true;
+	pageActions.enterPassword(password)
 });
 
 And(/^I check I agree checkbox$/, () => {
-	return true;
+	pageActions.checkIAgreeCheckbox()
 });
 
 And(/^I click on Continue button$/, () => {
-	return true;
+	pageActions.clickOnContinueButton()
 });
 
 And(/^I enter Monthly rent$/, () => {
-	return true;
+	pageActions.enterMonthlyRent('800')
+	pageActions.clickOnContinueButton()
 });
 
 And(/^I enter Total Income$/, () => {
-	return true;
+	pageActions.enterIncome('100000')
+
 });
 
 And(/^I select Year$/, () => {
-	return true;
+	pageActions.selectYear()
 });
 
 And(/^I click on Continue button$/, () => {
-	return true;
+	pageActions.clickOnContinueButton()
 });
 
 And(/^I enter Credit Score$/, () => {
-	return true;
+	pageActions.enterCreditScore('800')
 });
 
 And(/^I click on Continue button$/, () => {
-	return true;
+	pageActions.clickOnContinueButton()
 });
 
-And(/^I check I agree checkbox$/, () => {
-	return true;
+And(/^I check Accept Terms checkbox$/, () => {
+	pageActions.checkAcceptTermsCheckbox()
 });
 
 When(/^I click on Continue button$/, () => {
-	return true;
+	pageActions.clickOnContinueButton()
 });
 
 Then(/^I validate borrow amount is greater than zero$/, () => {
-	return true;
+	cy.contains('$59,915').should('be.visible')
 });
 
 And(/^I validate APR range is greater than zero$/, () => {
-	return true;
+	cy.contains('3.5 - 9.83%*').should('be.visible')
 });

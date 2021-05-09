@@ -17,7 +17,7 @@ Feature: Shift | Get Pre-qualified flow
         And I click on Continue button
         And I enter Credit Score
         And I click on Continue button
-        And I check I agree checkbox
+        And I check Accept Terms checkbox
         When I click on Continue button
         Then I validate borrow amount is greater than zero
         And I validate APR range is greater than zero

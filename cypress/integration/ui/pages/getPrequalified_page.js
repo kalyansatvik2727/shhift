@@ -4,7 +4,7 @@ const page = {
         INTRO_TEXT: 'Get estimated loan terms in 60 seconds!',
         GETMYTERMS: 'Get my terms',
         CONTINUE: 'Continue',
-        YEAR:'Year'
+        YEAR: 'Year'
     },
     elements: {
         emailInput: '#email',
@@ -13,42 +13,51 @@ const page = {
         iAgreeCheckbox: '#terms_terms',
         monthlyRent: '#MonthlyDebt',
         income: '#Income',
-        creditScore: '#CreditScore'
+        creditScore: '#CreditScore',
+        acceptTermsCheckBox: '#AgreeToTerms_AgreedToTerms'
 
     },
     actions: {
-        validateIntroPageText(){
-            cy.contains(literals.INTRO_TEXT).should('be.visible')
+
+        clickOnGetPreQualifiedButton() {
+            cy.contains('Get pre-qualified').click()
         },
-        clickOnGetMyTermsButton(){
-            cy.contains(literals.GETMYTERMS).click()
+        validateIntroPageText() {
+            cy.contains(page.literals.INTRO_TEXT).should('be.visible')
         },
-        enterEmail(value){
+        clickOnGetMyTermsButton() {
+            cy.contains(page.literals.GETMYTERMS).click({ force: true })
+        },
+        enterEmail(value) {
             cy.get(page.elements.emailInput).type(value)
         },
-        enterPhoneNumber(value){
+        enterPhoneNumber(value) {
             cy.get(page.elements.phoneInput).type(value)
         },
-        enterPassword(value){
+        enterPassword(value) {
             cy.get(page.elements.passwordInput).type(value)
         },
-        checkIAgreeCheckbox(){
+        checkIAgreeCheckbox() {
             cy.get(page.elements.iAgreeCheckbox).check()
         },
-        clickOnContinueButton(){
-            cy.contains(literals.GETMYTERMS).click()
+        clickOnContinueButton() {
+            cy.contains(page.literals.CONTINUE).click()
         },
-        enterMonthlyRent(value){
+        enterMonthlyRent(value) {
             cy.get(page.elements.monthlyRent).type(value)
         },
-        enterIncome(value){
+        enterIncome(value) {
             cy.get(page.elements.income).type(value)
         },
-        selectYear(){
-            cy.contains(page.elements.YEAR).click()
+        selectYear() {
+            cy.contains(page.literals.YEAR).click()
         },
-        enterCreditScore(value){
+        enterCreditScore(value) {
             cy.get(page.elements.creditScore).type(value)
+            cy.wait(3000)
+        },
+        checkAcceptTermsCheckbox() {
+            cy.get(page.elements.acceptTermsCheckBox).check()
         }
     }
 }
