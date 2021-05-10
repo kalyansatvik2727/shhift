@@ -6,7 +6,8 @@ const pageActions = page.actions
 
 const commonActions = new CommonActions()
 const util = new Utilities()
-const email = 'umar.mohammad' + util.randomNumber() + '@shift.com'
+//const email = 'umar.mohammad' + util.randomNumber() + '@shift.com'
+const email = 'test-buyer' + util.randomNumber() + '@shift.com'
 const password = 'Test123#'
 
 Given(/^I navigate to Finance Page with required login$/, () => {
@@ -84,9 +85,9 @@ When(/^I click on Continue button$/, () => {
 });
 
 Then(/^I validate borrow amount is greater than zero$/, () => {
-	cy.contains('$59,915').should('be.visible')
+	cy.contains('$0.00').should('not.be.visible')
 });
 
 And(/^I validate APR range is greater than zero$/, () => {
-	cy.contains('3.5 - 9.83%*').should('be.visible')
+	cy.contains('0.00%*').should('not.be.visible')
 });
