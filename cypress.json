@@ -11,7 +11,7 @@
   "viewportWidth": 1440,
   "pageLoadTimeout": 100000,
   "video": false,
-  "chromeWebSecurity": true,
+  "chromeWebSecurity": false,
   "restartBrowserBetweenSpecFiles": true,
   "ignoreTestFiles": "*._spec.ts",
   "integrationFolder": "cypress/integration/ui",
