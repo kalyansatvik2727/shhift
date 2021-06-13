@@ -97,15 +97,13 @@ Then('I click on View complete details button of any car and compare car model b
             pageActions.clickOnViewCompleteDetails()
             //cy.get('h1[title=' + '"' + carModel + '"]', { timeout: 100000 }).should('exist')
             cy.get('h1[title]', { timeout: 50000 }).should('be.visible')
-            cy.contains(carModel).should('be.visible')
+            cy.contains(carModel,{matchcase:false}).should('be.visible')
         })
     })
-
-})
-
-After(() => {
     cy.get('a').contains('My account').click({ force: true })
     cy.wait(3000)
     cy.get('a').contains('Sign Out').click({ force: true })
     cy.wait(5000)
-});
+
+})
+
