@@ -10,10 +10,11 @@
   "viewportHeight": 900,
   "viewportWidth": 1440,
   "pageLoadTimeout": 100000,
-  "video": true,
+  "video": false,
   "chromeWebSecurity": false,
   "restartBrowserBetweenSpecFiles": true,
   "ignoreTestFiles": "*._spec.ts",
   "integrationFolder": "cypress/integration/ui",
-  "testFiles": "**/*.feature"
+  "testFiles": "**/*.feature",
+  "projectId": "4fjboc"
 }
