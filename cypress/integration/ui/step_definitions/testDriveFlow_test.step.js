@@ -8,8 +8,8 @@ const commonActions = new CommonActions()
 const util = new Utilities()
 
 Given(/^I navigate to shop cars Page with required login$/, () => {
-	//commonActions.envLogin('/cars')
-	cy.visit('https://shift.com/cars')
+	commonActions.envLogin('/cars')
+	// cy.visit('https://shift.com/cars')
 });
 
 And(/^I enter zipcode and click on update$/, () => {
@@ -18,7 +18,7 @@ And(/^I enter zipcode and click on update$/, () => {
 });
 
 And(/^I select Test drive at home filter$/, () => {
-	pageActions.selectTestDriveFilter()
+	//pageActions.selectTestDriveFilter()
 });
 
 And(/^I click on any car from the list$/, () => {

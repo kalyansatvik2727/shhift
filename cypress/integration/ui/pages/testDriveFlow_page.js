@@ -18,7 +18,7 @@ const page = {
             cy.wait(5000)
         },
         selectTestDriveFilter(){
-            cy.get(page.elements.testDriveFilter).eq(0).click()
+            cy.get(page.elements.testDriveFilter).eq(0).click({force:true})
             cy.wait(5000)
         },
         clickOnAnyCarImage(){
