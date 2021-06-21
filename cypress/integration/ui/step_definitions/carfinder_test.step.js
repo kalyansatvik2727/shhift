@@ -96,8 +96,11 @@ Then('I click on View complete details button of any car and compare car model b
             cy.log('carModel: ' + carModel)
             pageActions.clickOnViewCompleteDetails()
             //cy.get('h1[title=' + '"' + carModel + '"]', { timeout: 100000 }).should('exist')
-            cy.get('h1[title]', { timeout: 50000 }).should('be.visible')
-            cy.contains(carModel,{matchcase:false}).should('be.visible')
+            cy.get('div h1[title]', { timeout: 50000 }).should('be.visible').invoke('text').then((text) => {
+                cy.log(Cypress._.toUpper(text))
+                cy.wrap(Cypress._.toUpper(text)).should('contain',carModel)
+            })
+            // cy.contains(carModel,{matchcase:false}).should('be.visible')
         })
     })
     cy.get('a').contains('My account').click({ force: true })
