@@ -9,7 +9,7 @@ const util = new Utilities()
 
 Given(/^I navigate to shop cars Page with required login$/, () => {
 	// commonActions.envLogin('/cars')
-	//training url
+	//training url used here
 	cy.visit('https://shift-training1.a.shiftdev.io/cars')
 });
 
