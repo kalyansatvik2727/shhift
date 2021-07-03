@@ -14,6 +14,14 @@ And('I validate {string} section', (text) => {
     cy.contains(text)
 });
 
+And('I validate {string} text', (text) => {
+    cy.contains(text)
+});
+
+And('I validate {string} link', (text) => {
+    cy.contains(text)
+});
+
 And('I click on {string} link', (text) => {
     cy.contains(text).click()
 });
