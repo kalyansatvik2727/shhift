@@ -92,7 +92,7 @@ Then('I click on View complete details button of any car and compare car model b
     cy.get('a > div > div > div > div > div > div > div').eq(0).then((el) => {
         cy.wrap(el).invoke('text').then((text) => {
             cy.log('text: ' + text)
-            carModel = text
+            carModel = Cypress._.toUpper(text)
             cy.log('carModel: ' + carModel)
             pageActions.clickOnViewCompleteDetails()
             //cy.get('h1[title=' + '"' + carModel + '"]', { timeout: 100000 }).should('exist')
