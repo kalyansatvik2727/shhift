@@ -10,7 +10,7 @@ const util = new Utilities()
 const email = 'test-buyer' + util.randomNumber() + '@shift.com'
 const password = 'Test123#'
 
-Given(/^I navigate to Finance Page with required login$/, () => {
+Given(/^I navigate to Finance Page with required loginn$/, () => {
 	//commonActions.envLogin('/finance')
 	cy.visit('https://shift.com/finance')
 });

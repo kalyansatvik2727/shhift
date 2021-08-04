@@ -2,7 +2,7 @@ Feature: Shift | Get Pre-qualified flow
 
     Get Pre-qualified flow Automation
     Scenario: Validate Car Get Pre-qualified flow
-        Given I navigate to Finance Page with required login
+        Given I navigate to Finance Page with required loginn
         And I click on Get pre-qualified button
         And I validate Intro page
         And I click on Get my terms button
