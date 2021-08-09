@@ -15,7 +15,7 @@ class VDPPage {
 
 	buyOnline(){
 		const buyOnline = cy.get('button').contains('Buy online now');
-		buyOnline.click();
+		buyOnline.click({force:true});
 	}
 
 	verifyBuyOnlinePage(){
