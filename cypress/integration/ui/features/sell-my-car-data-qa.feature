@@ -14,3 +14,9 @@ Feature: Shift - Sell My Car flow
         And I enter license plate with data-qa attribute
         And I select state with data-qa attribute
         And I click on Get my estimate button
+
+    Scenario: Validate data-qa attribute for vin
+        Given I navigate to sell-my-car page
+        And I click on vin with data-qa attribute
+        And I enter vin with data-qa attribute
+        And I click on Get my estimate button

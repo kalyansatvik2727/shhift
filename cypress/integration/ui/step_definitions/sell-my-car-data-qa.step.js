@@ -37,3 +37,11 @@ And('I select state with data-qa attribute', () => {
     cy.get('[data-qa=state]',{timeout:50000}).should('be.visible').select('MN')
 })
 
+And('I click on vin with data-qa attribute', () => {
+    cy.get('[data-qa=vin_link]',{timeout:50000}).should('be.visible').click()
+})
+
+And('I enter vin with data-qa attribute', () => {
+    cy.get('[data-qa=vin]',{timeout:50000}).should('be.visible').type('CA1234GA')
+})
+
