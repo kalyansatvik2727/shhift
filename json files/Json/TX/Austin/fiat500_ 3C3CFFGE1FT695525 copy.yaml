@@ -1,0 +1,53 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+          "city": "Austin",
+      "county": "Travis",
+      "state": "TX",
+      "street": "120 Laurel Ln",
+      "zipCode": "78705",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "hatchback",
+    "curbWeight": 2980,
+    "currentLicensePlateState": "CA",
+    "documentFees": 500,
+    "fuelType": "electric",
+    "grossWeightRating": 16700,
+    "horsepower": 355,
+    "listingState": "CA",
+    "manufacturesSuggestedRetailPrice": 31800,
+    "milesPerGallon": {
+      "city": 122,
+      "highway": 108
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 1,
+    "numberOfPlates": 1,
+    "odometerReading": 28180,
+    "sellingPrice": 10650,
+    "taxableSellingPrice": 10650,
+    "tradeInValue": 0,
+    "vin": "3C3CFFGE1FT695525",
+    "year": 2015
+  }
+}
+
+
+
+#basePrice does not make sense?
+#https://shift.com/car/2015-gray-fiat-500e/c185768

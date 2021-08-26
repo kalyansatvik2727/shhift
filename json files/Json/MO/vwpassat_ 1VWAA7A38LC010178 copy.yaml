@@ -1,0 +1,72 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+  "city": "Springfield",
+      "county": "Greene",
+      "state": "MO",
+      "street": "601 S National Ave",
+      "zipCode": "65804",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "sedan",
+    "curbWeight": 3325,
+    "currentLicensePlateState": "WA",
+    "cylinderCount": 4,
+    "documentFees": 85,
+    "fuelType": "gasoline",
+    "grossWeightRating": 9000,
+    "horsepower": 18,
+    "listingState": "WA",
+    "manufacturesSuggestedRetailPrice": 22995,
+    "milesPerGallon": {
+      "city": 23,
+      "highway": 34
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 0,
+    "numberOfPlates": 1,
+    "odometerReading": 5254,
+    "sellingPrice": 20150,
+    "taxableSellingPrice": 15150,
+    "tradeInValue": 5000,
+    "vin": "1VWAA7A38LC010178",
+    "year": 2020
+  }
+}
+
+601 S National Ave, Springfield, MO 65804
+
+  "city": "Springfield",
+      "county": "Greene",
+      "state": "MO",
+      "street": "601 S National Ave",
+      "zipCode": "65804",
+      "zipCodeExt": 1234
+
+
+"city": "Fort Collins",
+      "county": "Larimer",
+      "state": "CO",
+      "street": "2436 Matthews St",
+      "zipCode": "80525",
+      "zipCodeExt": 1234
+
+
+#https://shift.com/car/2020-black-volkswagen-passat/c1429985
+  
+ 
+

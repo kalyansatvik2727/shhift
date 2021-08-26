@@ -1,0 +1,53 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+          "city": "Manhattan",
+      "county": "Riley",
+      "state": "KS",
+      "street": "928 Leavenworth St",
+      "zipCode": "66502",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "pickup",
+    "curbWeight": 5452,
+    "currentLicensePlateState": "CA",
+    "documentFees": 500,
+    "fuelType": "diesel",
+    "grossWeightRating": 14750,
+    "horsepower": 240,
+    "listingState": "CA",
+    "manufacturesSuggestedRetailPrice": 42095,
+    "milesPerGallon": {
+      "city": 17,
+      "highway": 25
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 0,
+    "numberOfPlates": 1,
+    "odometerReading": 72341,
+    "sellingPrice": 34950,
+    "taxableSellingPrice": 34950,
+    "tradeInValue": 0,
+    "vin": "1C6RR6NM2HS863241",
+    "year": 2017
+  }
+}
+
+
+
+#basePrice does not make sense?
+#https://shift.com/car/2017-white-ram-1500/c120397

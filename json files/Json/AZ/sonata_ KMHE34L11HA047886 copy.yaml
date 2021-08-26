@@ -1,0 +1,54 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+      "city": "Temple",
+      "county": "Maricopa",
+      "state": "AZ",
+      "street": "25 W University Dr",
+      "zipCode": "85281",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "sedan",
+    "curbWeight": 3560,
+    "currentLicensePlateState": "CA",
+    "documentFees": 85,
+    "fuelType": "electric-gas-hybrid",
+    "grossWeightRating": 4000,
+    "horsepower": 193,
+    "listingState": "CA",
+    "manufacturesSuggestedRetailPrice": 30100,
+    "milesPerGallon": {
+      "city": 38,
+      "highway": 43
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 0,
+    "numberOfPlates": 1,
+    "odometerReading": 22716,
+    "sellingPrice": 22400,
+    "taxableSellingPrice": 22400,
+    "tradeInValue": 0,
+    "vin": "KMHE34L11HA047886",
+    "year": 2018
+  }
+}
+
+
+
+#No grossWeightRating
+
+#https://shift.com/car/2017-silver-hyundai-sonata-hybrid/c1712420

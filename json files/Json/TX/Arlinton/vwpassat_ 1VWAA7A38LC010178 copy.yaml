@@ -1,0 +1,71 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+     "city": "Arlington",
+      "county": "Tarrant",
+      "state": "TX",
+      "street": "1311 Hillcrest Dr",
+      "zipCode": "76010",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "sedan",
+    "curbWeight": 3325,
+    "currentLicensePlateState": "WA",
+    "documentFees": 85,
+    "fuelType": "gasoline",
+    "grossWeightRating": 9000,
+    "horsepower": 174,
+    "listingState": "WA",
+    "manufacturesSuggestedRetailPrice": 22995,
+    "milesPerGallon": {
+      "city": 23,
+      "highway": 34
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 1,
+    "numberOfPlates": 1,
+    "odometerReading": 5254,
+    "sellingPrice": 20150,
+    "taxableSellingPrice": 15150,
+    "tradeInValue": 5000,
+    "vin": "1VWAA7A38LC010178",
+    "year": 2020
+  }
+}
+1311 Hillcrest Dr, Arlington, TX 76010
+
+
+  "city": "Temple",
+      "county": "Maricopa",
+      "state": "AZ",
+      "street": "25 W University Dr",
+      "zipCode": "85281",
+      "zipCodeExt": 1234
+
+
+"city": "Fort Collins",
+      "county": "Larimer",
+      "state": "CO",
+      "street": "2436 Matthews St",
+      "zipCode": "80525",
+      "zipCodeExt": 1234
+
+
+#https://shift.com/car/2020-black-volkswagen-passat/c1429985
+  
+ 
+

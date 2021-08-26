@@ -1,0 +1,53 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+           "city": "San Francisco",
+      "county": "San Francisco",
+      "state": "CA",
+      "street": "1039 Sanchez St",
+      "zipCode": "94114",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "pickup",
+    "curbWeight": 6800,
+    "currentLicensePlateState": "CA",
+    "documentFees": 85,
+    "fuelType": "gasoline",
+    "grossWeightRating": 14750,
+    "horsepower": 395,
+    "listingState": "CA",
+    "manufacturesSuggestedRetailPrice": 42095,
+    "milesPerGallon": {
+      "city": 15,
+      "highway": 21
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 0,
+    "numberOfPlates": 1,
+    "odometerReading": 34705,
+    "sellingPrice": 43950,
+    "taxableSellingPrice": 43950,
+    "tradeInValue": 0,
+    "vin": "1C6RR7PT4HS793994",
+    "year": 2017
+  }
+}
+
+
+
+#basePrice does not make sense?
+#https://shift.com/car/2017-gray-ram-1500/c149663

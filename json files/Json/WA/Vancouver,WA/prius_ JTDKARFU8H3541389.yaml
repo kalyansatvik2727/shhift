@@ -1,0 +1,54 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+     "city": "Vancouver",
+      "county": "Clark",
+      "state": "WA",
+      "street": "2009 Norris Rd",
+      "zipCode": "98661",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "sedan",
+    "curbWeight": 3560,
+    "currentLicensePlateState": "OR",
+    "documentFees": 85,
+    "fuelType": "electric-gas-hybrid",
+    "grossWeightRating": 4000,
+    "horsepower": 193,
+    "listingState": "OR",
+    "manufacturesSuggestedRetailPrice": 30015,
+    "milesPerGallon": {
+      "city": 54,
+      "highway": 50
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 0,
+    "numberOfPlates": 1,
+    "odometerReading": 23179,
+    "sellingPrice": 22550,
+    "taxableSellingPrice": 17550,
+    "tradeInValue": 5000,
+    "vin": "JTDKARFU8H3541389",
+    "year": 2017
+  }
+}
+
+
+
+#No grossWeightRating
+
+#https://shift.com/car/2017-silver-hyundai-sonata-hybrid/c1712420

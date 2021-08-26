@@ -1,0 +1,71 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+       "city": "Portland",
+      "county": "Multnomah",
+      "state": "OR",
+      "street": "1300 SW Park Ave",
+      "zipCode": "97201",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "sedan",
+    "curbWeight": 2921,
+    "currentLicensePlateState": "OR",
+    "documentFees": 85,
+    "fuelType": "gasoline",
+    "grossWeightRating": 3737,
+    "horsepower": 174,
+    "listingState": "OR",
+    "manufacturesSuggestedRetailPrice": 22995,
+    "milesPerGallon": {
+      "city": 30,
+      "highway": 39
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 1,
+    "numberOfPlates": 1,
+    "odometerReading": 62670,
+    "sellingPrice": 16500,
+    "taxableSellingPrice": 16500,
+    "tradeInValue": 0,
+    "vin": "19XFB2F97FE201190",
+    "year": 2015
+  }
+}
+
+1300 SW Park Ave, Portland, OR 97201
+
+  "city": "Portland",
+      "county": "Multnomah",
+      "state": "OR",
+      "street": "1300 SW Park Ave",
+      "zipCode": "97201",
+      "zipCodeExt": 1234
+
+
+"city": "Fort Collins",
+      "county": "Larimer",
+      "state": "CO",
+      "street": "2436 Matthews St",
+      "zipCode": "80525",
+      "zipCodeExt": 1234
+
+
+#https://shift.com/car/2020-black-volkswagen-passat/c1429985
+  
+ 
+

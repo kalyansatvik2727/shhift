@@ -1,0 +1,64 @@
+{
+  "applicationType": "TitleAndRegistration",
+  "owner": {
+    "firstName": "John",
+    "isIndividual": true,
+    "lastName": "Doe",
+    "ownerType": "Individual"
+  },
+  "plateDestination": {
+    "name": "John Doe",
+    "type": "Owner"
+  },
+  "registration": {
+    "action": "NewRegistration",
+    "address": {
+  "city": "Tuttle",
+      "county": "Grady",
+      "state": "OK",
+      "street": "108 W Main St",
+      "zipCode": "73089",
+      "zipCodeExt": 1234
+    }
+  },
+  "vehicle": {
+    "bodyType": "sedan",
+    "curbWeight": 3325,
+    "currentLicensePlateState": "WA",
+    "documentFees": 85,
+    "fuelType": "gasoline",
+    "grossWeightRating": 9000,
+    "horsepower": 174,
+    "listingState": "WA",
+    "manufacturesSuggestedRetailPrice": 22995,
+    "milesPerGallon": {
+      "city": 23,
+      "highway": 34
+    },
+    "numberOfDoors": 4,
+    "numberOfLienholders": 0,
+    "numberOfPlates": 1,
+    "odometerReading": 5254,
+    "sellingPrice": 20150,
+    "taxableSellingPrice": 15150,
+    "tradeInValue": 5000,
+    "vin": "1VWAA7A38LC010178",
+    "year": 2020
+  }
+}
+
+108 W Main St, Tuttle, OK 73089
+
+  "city": "Tuttle",
+      "county": "Grady",
+      "state": "OK",
+      "street": "108 W Main St",
+      "zipCode": "73089",
+      "zipCodeExt": 1234
+
+
+
+#https://shift.com/car/2020-black-volkswagen-passat/c1429985
+  
+ 
+
