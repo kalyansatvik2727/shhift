@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "single": "node_modules/.bin/cypress run --headed --spec 'cypress\\integration\\ui\\features\\vehicleDescription.feature' --browser chrome",
     "cy:ui:headed": "cypress run --headed --spec '**/specs/**spec.ts'",
-    "cy:ui:run": "cypress run --spec '**/specs/**spec.ts'"
+    "cy:ui:run": "cypress run --spec '**/specs/**spec.ts'",
+    "cy:api:run": "cypress run --config-file cypress.env.json"
   },
   "author": "",
   "license": "ISC",
