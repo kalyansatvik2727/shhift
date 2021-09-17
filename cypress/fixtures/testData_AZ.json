@@ -1,6 +1,6 @@
-[
-  {
-    "AZ":[{
+{
+  "AZ": [
+    {
       "applicationType": "TitleAndRegistration",
       "owner": {
         "firstName": "John",
@@ -48,7 +48,5 @@
         "year": 2015
       }
     }
-
-    ]
-  }
-]
+  ]
+}

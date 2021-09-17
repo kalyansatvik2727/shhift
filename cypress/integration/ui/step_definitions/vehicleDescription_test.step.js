@@ -8,6 +8,7 @@ const commonActions = new CommonActions()
 const util = new Utilities()
 
 Given(/^I navigate to shift home page with required login$/, () => {
+    // commonActions.envLogin('/')
     cy.visit('https://shift.com/')
 });
 

@@ -1,5 +1,8 @@
-Feature: Shift | POST request
+Feature: Shift - POST request
 
         Validate POST Request
-        Scenario: Validate POST request
-                Given I send a POST request to calculate tax fee
+        Scenario Outline: Validate POST request
+                Given I send a POST request to calculate tax fee "<state>"
+        Examples:
+                        | state |
+                        | AZ    |

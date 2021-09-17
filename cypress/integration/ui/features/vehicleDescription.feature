@@ -4,8 +4,11 @@ Feature: Shift - Vehicle Description Page
         Scenario: Validate Vehicle Description Page
                 Given I navigate to shift home page with required login
                 And I click on Shop Cars link
+                And I enter text 'Honda' in search input link
+                And I click on quick search
                 And I select any random car
                 Then I validate 'Free 7-day returns' text
+                And I validate '30-day warranty' text
                 And I validate 'Overview' section
                 And I click on 'See all specs' link
                 And I validate Modal 'Vehicle Specs'
@@ -15,7 +18,16 @@ Feature: Shift - Vehicle Description Page
                 And I validate Modal 'Safety'
                 And I close Modal
                 And I validate 'History' section
+                And I validate 'Inspected and guaranteed' section
+                And I validate 'Stationary road test' text
+                And I validate 'Driving road test' text
+                And I validate 'Brakes & wheels' text
+                And I validate 'Body' text
+                And I validate 'Under hood' text
+                And I validate 'Suspension and underbody' text
                 And I validate 'Other cars you might like' section
                 And I validate 'Frequently Asked Questions' section
                 And I validate 'Ask us a question about this car' section
                 And I validate 'See full FAQ' link
+                And I validate 'By submitting this form, you agree to Shift’s Terms of Service and Privacy Policy' text
+                And I validate 'Send' text
