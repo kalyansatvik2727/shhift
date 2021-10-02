@@ -30,8 +30,20 @@ And('I click on {string} link', (text) => {
     return cy.contains(text).click().wait(5000)
 });
 
+And('I click on button with label {string}', (label) => {
+    return cy.get('button').contains(label).click()
+});
+
 And('I enter text {string} in search input link', (text) => {
     return cy.get('input[name=search_input]').type(text)
+});
+
+And('I enter text {string} in input element {string}', (text,element) => {
+    return cy.get(element).type(text)
+});
+
+And('I select value {string} from dropdown {string}', (value,element) => {
+    return cy.get(element).select(value)
 });
 
 And('I click on quick search', () => {
@@ -40,6 +52,8 @@ And('I click on quick search', () => {
     searchButton.click({force:true});
     cy.wait(5000)
 });
+
+
 
 
 
