@@ -71,3 +71,7 @@ And('I enter email in booking evalution', () => {
 And('I enter phoneNumber in booking evalution', () => {
     return cy.get('#phoneNumber').type(phoneNumber)
 });
+
+And('I enter address in booking evalution', () => {
+    return cy.get('#address').click().type("333 O'Farrell St, San Francisco, CA 94102, USA")
+});
