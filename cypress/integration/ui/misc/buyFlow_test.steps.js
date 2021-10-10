@@ -1,6 +1,6 @@
 import HomePage from '../pages/home_page';
 import BuyerPage from '../pages/buyer_page';
-//import VDPPage from '../pages/vdp_page';
+import VDPPage from '../pages/vdp_page';
 
 const {
   Given,

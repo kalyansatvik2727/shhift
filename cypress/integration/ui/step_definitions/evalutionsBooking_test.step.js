@@ -56,10 +56,6 @@ And('I enter first name in booking evalution', () => {
     return cy.get('#firstName').type(firstName)
 });
 
-And('I enter first name in booking evalution', () => {
-    return cy.get('#firstName').type(firstName)
-});
-
 And('I enter last name in booking evalution', () => {
     return cy.get('#lastName').type(lastName)
 });
