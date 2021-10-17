@@ -31,11 +31,14 @@ Given('I send a POST request to calculate tax fee', () => {
     })
 })
 
-Given('I send an XML POST request', () => {
+Given('I send an XML POST request with body {string}', (body) => {
     describe('XML call', function () {
         before(() => {
-            cy.fixture("xml_body.xml").as('xmlBody').then((xmlBody) => {
-                cy.intercept('GET', 'xml_body.xml', xmlBody)
+            // cy.fixture("xml_body.xml").as('xmlBody').then((xmlBody) => {
+            //     cy.intercept('GET', 'xml_body.xml', xmlBody)
+            // })
+            cy.fixture(body).as('xmlBody').then((xmlBody) => {
+                cy.intercept('GET', body, xmlBody)
             })
         })
     

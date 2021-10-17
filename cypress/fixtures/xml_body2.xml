@@ -1,0 +1,37 @@
+<ServiceRequest xmlns="urn:atc-feequote" type="FeeQuote"  verbosityLevel="4" granularity="2" quoteType="A">
+
+<IsProcessing>0</IsProcessing><State>Idaho</State><County>Kootenai</County><City>Hayden</City><OutsideCityLimits>0</OutsideCityLimits>
+
+<InState>false</InState>
+
+<Vehicle><VIN>JH4CL96854C001217</VIN><BasePrice>7550.00</BasePrice><CustomerType>D</CustomerType>
+
+<FuelType>G</FuelType><Finance><DownPayment>0.00</DownPayment><MonthlyPayment>0</MonthlyPayment><MonthsInTerm>0</MonthsInTerm>
+
+<CapCostReduction>0</CapCostReduction></Finance><GVW>3230</GVW><GVWR>3230</GVWR><LienStatus>0</LienStatus><Year>2004</Year>
+
+<MSRP>26490.00</MSRP><Plate><IsTransfer>0</IsTransfer><PlateType>R</PlateType></Plate><RegistrationOption>B</RegistrationOption>
+
+<RegistrationMonths>12</RegistrationMonths><DaysSincePurchase>5100</DaysSincePurchase><TitleStatus>T</TitleStatus><TradeIns>
+
+<TradeIn><Amount>0.00</Amount></TradeIn></TradeIns><TransactionType>P</TransactionType>
+
+<VehicleType>PV</VehicleType><Warranties><Warranty name="Warranties">0</Warranty>
+
+</Warranties><Weight>100</Weight><Rebates><Dealer>0.00</Dealer><Manufacturer>0</Manufacturer></Rebates>
+
+<Additions><Addition name="Add on">0</Addition></Additions><DeliveryFees></DeliveryFees><Discounts><Discount name="Discount">0.00 </Discount>
+
+</Discounts><DocFees><DocFee name="Doc Fees">85.00</DocFee></DocFees>
+
+<DealerServiceFees></DealerServiceFees>
+
+<ExtendedWarranties><ExtendedWarranty name="ExtendedWarranties">0</ExtendedWarranty></ExtendedWarranties>
+
+<InsurancePackages></InsurancePackages><ProtectionPackages></ProtectionPackages><Taxes></Taxes>
+
+<TheftProtections><TheftProtection name="TheftProtection">0</TheftProtection></TheftProtections>
+
+</Vehicle>
+
+</ServiceRequest>
