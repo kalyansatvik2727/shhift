@@ -69,5 +69,7 @@ And('I enter phoneNumber in booking evalution', () => {
 });
 
 And('I enter address in booking evalution', () => {
-    return cy.get('#address').click().type("333 O'Farrell St, San Francisco, CA 94102, USA")
+    cy.get('#address').click({ force: true}).get('body').trigger('keydown', { keyCode: 40})
+    // .type("1346 Saratoga Dr, San Mateo, CA 94403, USA")
+    // cy.get('body').trigger('keydown', { keyCode: 40})
 });

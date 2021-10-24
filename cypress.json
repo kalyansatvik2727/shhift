@@ -9,8 +9,8 @@
     "apiPassword": "E9yudmWE6!Xtcem*ov3c_jXyTXeiya"
   },
   "defaultCommandTimeout": 60000,
-  "viewportHeight": 900,
-  "viewportWidth": 1440,
+  "viewportHeight": 960,
+  "viewportWidth": 1536,
   "pageLoadTimeout": 100000,
   "video": false,
   "chromeWebSecurity": false,
