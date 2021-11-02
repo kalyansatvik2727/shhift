@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import "cypress-react-selector";
+require('cypress-xpath');
 import "./commands";
 
 // Alternatively you can use CommonJS syntax:

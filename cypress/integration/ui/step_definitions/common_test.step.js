@@ -6,6 +6,10 @@ Given('I navigate to shift home page with forcebase url and required login', () 
     return commonActions.envLogin('/')
 })
 
+Given('I navigate to shift home page with required login', () => {
+    return cy.visit('https://shift.com/')
+})
+
 And('I validate Modal {string}', (text) => {
     return cy.get('div[class*=Modal__is-open]').contains(text)
 });
@@ -52,6 +56,24 @@ And('I click on quick search', () => {
     searchButton.click({force:true});
     cy.wait(5000)
 });
+
+And('I enter car model {string} in shop cars filter and validate length {string} of search results with element {string}',(carModel,length, element) => {
+        var len = Number(length)
+        return cy.get("input[placeholder*='Search by year']").clear().type(carModel).then(()=>{
+            cy.xpath(element).its('length').should('eq', len)
+        })
+})
+
+And('I enter car model {string} in shop cars filter and select the required option {string} in search results with element {string}',(carModel,option, element) => {
+        var len = Number(length)
+        return cy.get("input[placeholder*='Search by year']").clear().type(carModel).then(()=>{
+            cy.xpath(element).each(($option,index)=>{
+                if($option.text()==option){
+                    $option.click();
+                }
+            })
+        })
+})
 
 
 
