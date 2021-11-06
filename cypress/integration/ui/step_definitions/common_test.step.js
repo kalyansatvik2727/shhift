@@ -59,17 +59,36 @@ And('I click on quick search', () => {
 
 And('I enter car model {string} in shop cars filter and validate length {string} of search results with element {string}',(carModel,length, element) => {
         var len = Number(length)
-        return cy.get("input[placeholder*='Search by year']").clear().type(carModel).then(()=>{
+        return cy.get("input[placeholder*='Search by']").clear().type(carModel).then(()=>{
             cy.xpath(element).its('length').should('eq', len)
         })
 })
 
 And('I enter car model {string} in shop cars filter and select the required option {string} in search results with element {string}',(carModel,option, element) => {
         var len = Number(length)
-        return cy.get("input[placeholder*='Search by year']").clear().type(carModel).then(()=>{
+        return cy.get("input[placeholder*='Search by']").clear().type(carModel).then(()=>{
             cy.xpath(element).each(($option,index)=>{
                 if($option.text()==option){
                     $option.click();
+                }
+            })
+        })
+})
+
+And('I enter car model {string} in home page filter and validate length {string} of search results with element {string}',(carModel,length, element) => {
+        var len = Number(length)
+        return cy.get("input[placeholder*='Search by']").clear().type(carModel).wait(3000).then(()=>{
+            cy.get(element).its('length').should('eq', len)
+        })
+})
+
+And('I enter car model {string} in home page filter and select the required option {string} in search results with element {string}',(carModel,option, element) => {
+        var len = Number(length)
+        return cy.get("input[placeholder*='Search by']").clear().type(carModel).wait(3000).then(()=>{
+            cy.get(element).each(($option,index)=>{
+                cy.log($option.text())
+                if($option.text()==option){
+                    cy.wrap($option).click();
                 }
             })
         })
