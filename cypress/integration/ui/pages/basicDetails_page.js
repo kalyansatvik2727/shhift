@@ -1,70 +1,41 @@
 class BasicDetailsPage {
 	
-	addZIP(){
-		const zip = cy.get('input[name="zipCode"]', {timeout:10000});
-		zip.type('94117');
+	addZIP(zipCode){
+		const zipCodeInput = cy.get('input[name="zipCode"]', {timeout:10000});
+		zipCodeInput.type(zipCode);
+	}
+	
+	addMileage(mileageValue){
+		const mileageInput = cy.get('input[name="mileage"]', {timeout:10000});
+		mileageInput.type(mileageValue);
 	}
 
-	addOOAZIP(){
-		const zip = cy.get('input[name="zipCode"]', {timeout:10000});
-		zip.type('22201');	
+	selectTRIM(trimValue){
+		return cy.get('select[id="trim dropdown"]', {timeout:10000}).select(trimValue);
 	}
 
-	addMileage(){
-		const mileage = cy.get('input[name="mileage"]', {timeout:10000});
-		mileage.type('3200');
+	selectColorBlack(colorName){
+		return cy.get('label[for="quote_flow_basic_details_color_'+colorName+'"]', {timeout:10000}).click();
 	}
 
-	add170kMileage(){
-		const mileage = cy.get('input[name="mileage"]', {timeout:10000});
-		mileage.type('170000');	
+	selectBody(bodyType){
+		const bodyElement = cy.get('label[for="quote_flow_basic_details_body_'+bodyType+'"]', {timeout:10000}).click();
+		bodyElement.click();
 	}
 
-	selectTRIM(){
-		return cy.get('select[id="trim dropdown"]', {timeout:10000}).select('Premium Plus');
+	selectTransmission(transmissionType){
+		const transmissionElement = cy.get('label[for="quote_flow_basic_details_transmission_'+transmissionType+'"]', {timeout:10000}).click();
+		transmissionElement.click();
 	}
 
-	selectTestlaTRIM(){
-		return cy.get('select[id="trim dropdown"]', {timeout:10000}).select('Long Range');
-	}
-
-	selectColorBlack(){
-		return cy.get('label[for="quote_flow_basic_details_color_Black"]', {timeout:10000}).click();
-	}
-
-	selectBody(){
-		const fourDoorSedan = cy.get('label[for="quote_flow_basic_details_body_4 Door Sedan"]', {timeout:10000}).click();
-		fourDoorSedan.click();
-	}
-
-	selectTransmission(){
-		const transmission = cy.get('label[for="quote_flow_basic_details_transmission_6-Speed Manual"]', {timeout:10000}).click();
-		transmission.click();
-	}
-
-	selectTeslaTransmission(){
-		const transmission = cy.get('label[for="quote_flow_basic_details_transmission_1-Speed Automatic"]', {timeout:10000}).click();
-		transmission.click();
-	}
-
-	selectDriveTrain(){
-		const driveTrain = cy.get('label[for="quote_flow_basic_details_drivetrain_All Wheel Drive"]', {timeout:10000}).contains('All Wheel Drive');
+	selectDriveTrain(driveType){
+		const driveTrain = cy.get('label[for="quote_flow_basic_details_drivetrain_'+driveType+'"]', {timeout:10000}).contains(driveType);
 		driveTrain.click();
 	}
 
-	selectRearDriveTrain(){
-		const driveTrain = cy.get('label[for="quote_flow_basic_details_drivetrain_Rear Wheel Drive"]', {timeout:10000}).contains('Rear Wheel Drive');
-		driveTrain.click();
-	}
-
-	selectEngine(){
-		const engine = cy.get('label[for="quote_flow_basic_details_engine_2L I-4 Turbocharged Flex-Fuel"]', {timeout:10000}).contains('2L I-4 Turbocharged Flex-Fuel');
-		engine.click();
-	}
-
-	selectElectricEngine(){
-		const engine = cy.get('label[for="quote_flow_basic_details_engine_Electric"]', {timeout:10000}).contains('Electric');
-		engine.click();
+	selectEngine(engineType){
+		const engineElement = cy.get('label[for="quote_flow_basic_details_engine_'+engineType+'"]', {timeout:10000}).contains(engineType);
+		engineElement.click();
 	}
 
 	clickContinue(){

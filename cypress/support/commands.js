@@ -21,5 +21,19 @@
 // Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
 //
 //
-// -- This will overwrite an existing command --
+// -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+// Cypress.on('uncaught:exception', (err, runnable) => {
+//   // returning false here prevents Cypress from
+//   // failing the test
+//   return false;
+// });
+
+Cypress.Commands.add('any', { prevSubject: 'element' }, (subject, size = 1) => {
+  cy.wrap(subject).then(elementList => {
+    elementList = (elementList.jquery) ? elementList.get() : elementList;
+    elementList = Cypress._.sampleSize(elementList, size);
+    elementList = (elementList.length > 1) ? elementList : elementList[0];
+    cy.wrap(elementList);
+  });
+});

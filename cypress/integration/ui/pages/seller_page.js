@@ -33,22 +33,22 @@ class SellerPage {
     button.click();
   }
 
-  selectYear() {
+  selectYear(year) {
     return cy
       .get('#seller_landing_quote_flow_entry_point_ymm_year')
-      .select('2014');
+      .select(year);
   }
 
-  selectMake() {
+  selectMake(make) {
     return cy
       .get('#seller_landing_quote_flow_entry_point_ymm_make', { timeout: 500 })
-      .select('Audi');
+      .select(make);
   }
 
-  selectModel() {
+  selectModel(model) {
     return cy
       .get('#seller_landing_quote_flow_entry_point_ymm_model', { timeout: 500 })
-      .select('A4');
+      .select(model);
   }
 
   selectYear2018(){
@@ -77,18 +77,18 @@ class SellerPage {
     return cy.get('button').contains('VIN').click();
   }
 
-  addLP() {
+  addLP(lpValue) {
     const lp = cy.get('input[name="license_plate_number"]', { timeout: 10000 });
-    lp.type('7VQG503');
+    lp.type(lpValue);
   }
 
-  addState() {
-    return cy.get('#license_plate_state_dropdown').select('CA');
+  addState(state) {
+    return cy.get('#license_plate_state_dropdown').select(state);
   }
 
-  addVIN() {
+  addVIN(vinValue) {
     const vin = cy.get('input[name="vin"]', { timeout: 10000 });
-    vin.type('2HGFC2F57GH563084');
+    vin.type(vinValue);
   }
 }
 

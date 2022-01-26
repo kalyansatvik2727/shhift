@@ -14,17 +14,25 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "cypress-react-selector";
-require('cypress-xpath');
-import "./commands";
+import 'cypress-react-selector';
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-Cypress.on("uncaught:exception", (error, runnable) => {
+require('cypress-xpath');
+
+Cypress.on('uncaught:exception', (error, runnable) => {
   return false;
 });
 
 Cypress.Cookies.defaults({
-  preserve: ["session", "loginToken"],
+  preserve: ['session', 'loginToken'],
+});
+
+Cypress.Server.defaults({
+  delay: 500,
+  ignore: (xhr) => {
+    // handle custom logic for filtering XHR requests
+  },
 });

@@ -6,25 +6,11 @@ class Utilities {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  randomNumber_phoneNumber() {
-    var text = '777777'
-    return text+=Math.floor(Math.random() * 10000);
-  }
-
-  randomString(){
-    var text=''
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    for( var i=0;i<6;i++){
-      text+=possible.charAt(Math.floor(Math.random() *possible.length))
-    }
-    return text;
-  }
-
   splitDollar(str) {
-    const dollarValue = str.split("$")
-    const value = dollarValue[1].trim()
-    return value
+    const dollarValue = str.split('$');
+    const value = dollarValue[1].trim();
+    return value;
   }
 }
 
-export default Utilities
+export default Utilities;

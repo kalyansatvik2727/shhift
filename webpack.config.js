@@ -1,21 +1,27 @@
-const path = require('path')
+  
+const wp = require('@cypress/webpack-preprocessor')
 
-module.exports = {
-  entry: './src/index.ts',
+const webpackOptions = {
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        test: /\.ts$/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: 'ts-loader'
+          }
+        ]
       }
     ]
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js']
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
   }
 }
+
+const options = {
+  webpackOptions
+}
+
+module.exports = wp(options)

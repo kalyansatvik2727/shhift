@@ -185,8 +185,8 @@
       "numberOfPlates": 1,
       "odometerReading": 62670,
       "sellingPrice": 16500,
-      "taxableSellingPrice": 16500,
-      "tradeInValue": 0,
+      "taxableSellingPrice": 11500,
+      "tradeInValue": 5000,
       "vin": "19XFB2F97FE201190",
       "year": 2015
     }

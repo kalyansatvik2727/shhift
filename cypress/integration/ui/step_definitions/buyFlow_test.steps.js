@@ -1,6 +1,7 @@
 import HomePage from '../pages/home_page';
 import BuyerPage from '../pages/buyer_page';
 import VDPPage from '../pages/vdp_page';
+import DataTableUtils from '../../../support/DataTableUtils';
 
 const {
   Given,
@@ -12,6 +13,7 @@ const {
 const home = new HomePage();
 const buyer = new BuyerPage();
 const vdp = new VDPPage();
+const dataTableUtils = new DataTableUtils();
 
 Given('I navigate site', () => {
     home.visit();
@@ -25,22 +27,20 @@ When('I filter by test drive at home', () => {
 	buyer.filterByTestDrive();
 })
 
-When('I update the Zip Code', () => {
-	buyer.enterZipCode();
+When('I update the Zip Code', (dataTable) => {
+	buyer.enterZipCode(dataTableUtils.getValue(dataTable, 'ZipCode'));
 	buyer.updateZipCode();
 })
 
-When('I make a search', () => {
+When('I make a search for Honda', () => {
 	buyer.chooseMakeHonda();	
 })
 
-When('I select a car', () => {
+When('I select the first car', () => {
 	buyer.selectFirstCarCard();
 })
 
 When('I buy online', () => {
-	vdp.verifyVDPPage();
-	vdp.goToBuyOnlineTab();
 	vdp.buyOnline();
 })
 

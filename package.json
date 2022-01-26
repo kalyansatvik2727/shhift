@@ -1,32 +1,27 @@
 {
-  "name": "typescr_shift",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ShiftCypressTests",
+  "version": "2.0.0",
+  "description": "Cypress Javascript starter pack for UI and API testing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "single": "node_modules/.bin/cypress run --headed --spec 'cypress\\integration\\ui\\features\\vehicleDescription.feature' --browser chrome",
-    "cy:ui:headed": "cypress run --headed --spec '**/specs/**spec.ts'",
-    "cy:ui:run": "cypress run --spec '**/specs/**spec.ts'",
-    "cy:api:run": "cypress run --config-file cypress.env.json",
-    "cy:api:open": "cypress open --config-file cypress.env.json"
+    "single": "./node_modules/.bin/cypress run --headed --spec 'cypress/integration/ui/features/lotsFlow.feature' --browser chrome --no-exit",
+    "runHeadless": "./node_modules/.bin/cypress run --headless"
   },
-  "author": "",
+  "author": "Umar Mohammad",
   "license": "ISC",
   "devDependencies": {
-    "@cypress/webpack-preprocessor": "^5.6.0",
-    "cypress": "^7.4.0",
+    "cypress": "7.4.0",
     "cypress-cucumber-preprocessor": "^4.0.3",
-    "cypress-localstorage-commands": "^1.4.0",
     "cypress-react-selector": "2.2.0",
-    "cypress-social-logins": "^1.9.2",
     "cypress-xpath": "^1.6.2",
-    "ts-loader": "^8.1.0",
-    "typescript": "^3.9.9",
-    "webpack": "^5.28.0"
+    "typescript": "^3.2.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "step_definitions": "cypress/integration/ui/step_definitions/"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.6"
   }
 }

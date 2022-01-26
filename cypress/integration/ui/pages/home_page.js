@@ -1,11 +1,11 @@
 class HomePage {
 
 	visit(){
-    	cy.visit('www.shift.com');
+    	cy.visit('https://shift.com/');
 	}
 
 	visitSeller(){
-    	cy.visit('www.shift.com/sell-my-car');
+    	cy.visit('https://shift.com/sell-my-car');
 	}
 
 	visitWalkin() {
