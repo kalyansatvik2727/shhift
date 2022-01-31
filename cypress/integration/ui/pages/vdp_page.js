@@ -15,6 +15,15 @@ class VDPPage {
   getFavoriteIcon(){
     return cy.xpath("(//div[contains(@id,'heart-icon')])[3]");
   }
+
+  visitSalePendingPage(){
+    return cy.visit('https://staging.shift.com/cars?q=sale+pending');
+  }
+
+  clickOnRandomSaleEndingCar(){
+    return cy.xpath('//span[contains(text(),"sale pending")]').first().click();
+  }
+
 }
 
 export default VDPPage;

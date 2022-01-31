@@ -14,8 +14,7 @@
     "cypress": "7.4.0",
     "cypress-cucumber-preprocessor": "^4.0.3",
     "cypress-react-selector": "2.2.0",
-    "cypress-xpath": "^1.6.2",
-    "typescript": "^3.2.1"
+    "cypress-xpath": "^1.6.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,

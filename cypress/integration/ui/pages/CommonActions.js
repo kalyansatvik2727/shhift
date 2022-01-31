@@ -27,5 +27,10 @@ class CommonActions {
       this.login(relativeUrl);
     }
   }
+
+  verifyText(text){
+    cy.contains(text)
+  }
+
 }
 export default CommonActions;

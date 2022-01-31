@@ -30,6 +30,10 @@ And('I validate {string} text', (text) => {
   return cy.contains(text);
 });
 
+And('I validate {string} text is not exist', (text) => {
+  return cy.contains(text).should('not.exist');
+});
+
 And('I validate {string} link', (text) => {
   return cy.contains(text);
 });
@@ -65,6 +69,10 @@ And(/^I navigate to staging cars page$/, () => {
 
 And('I navigate to favorites cars page', () => {
   cy.visit('https://staging.shift.com/favorites');
+});
+
+And('I enter data {string} in {string}', (text,locator) => {
+  cy.get(locator).clear().type(text);
 });
 
 And('I navigate back', () => {

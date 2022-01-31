@@ -20,3 +20,11 @@ Then('I verify the favorite icon its filled on VDP', () => {
 And('I click on the favorite icon on VDP', () => {
   vdpPage.clickFavoriteIcon();
 });
+
+And('I navigate to shift sale pending page with staging url', () => {
+  vdpPage.visitSalePendingPage();
+});
+
+And('I click on random sale ending car', () => {
+  vdpPage.clickOnRandomSaleEndingCar();
+});
