@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "single": "./node_modules/.bin/cypress run --headed --spec 'cypress/integration/ui/features/lotsFlow.feature' --browser chrome --no-exit",
-    "runHeadless": "./node_modules/.bin/cypress run --headless"
+    "runHeadless": "./node_modules/.bin/cypress run --headless",
+    "cy:localheadless": "npx cypress run",
+    "cy:ui:run": "npx cypress run --headed"
   },
   "author": "Umar Mohammad",
   "license": "ISC",

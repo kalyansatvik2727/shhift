@@ -32,5 +32,17 @@ class CommonActions {
     cy.contains(text)
   }
 
+  enterDataInInput(locator,text){
+    cy.get(locator).clear().type(text);
+  }
+
+  clickOnButton(locator){
+    cy.get(locator).click();
+  }
+
+  clickOnLink(locator){
+    cy.get(locator).click();
+  }
+
 }
 export default CommonActions;

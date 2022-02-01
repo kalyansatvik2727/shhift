@@ -24,6 +24,10 @@ class VDPPage {
     return cy.xpath('//span[contains(text(),"sale pending")]').first().click();
   }
 
+  enterFirstName(name){
+    return cy.get('[name="first_name"]').type();
+  }
+
 }
 
 export default VDPPage;

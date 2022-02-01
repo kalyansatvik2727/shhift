@@ -1,6 +1,6 @@
 # cy-fy
 
-Cypress starter pack for UI and API automation testing. Simple and neat folder structure in combination with typescript will help you write test faster.
+Cypress starter pack for UI and API automation testing. Simple and neat folder structure in combination with Cucumber and JavaScript will help you write test faster.
 
 ## Get started
 
@@ -29,17 +29,9 @@ Cypress starter pack for UI and API automation testing. Simple and neat folder s
 
 ```js
 
-// this will clean and run the UI cucumber scenarios in headless mode on LOCALHOST
-npm run cy:localheadless
-
-// this will clean and run the UI cucumber scenarios in headless mode on Shift.com
+// this will run the UI cucumber scenarios in headless mode 
 npm run cy:headless
 
-// At the time of develop test code, you may want to see run execution locally
-npm run cy:ui:localrun
-
-// At the time of develop test code, you may want to run execution locally to debug
-npm run cy:ui:localdev
 ```
 
 #### Run tests in multiple browsers
@@ -48,11 +40,8 @@ npm run cy:ui:localdev
 // by-default test will be triggered in Electron
 npm run cy:ui:run
 
-// to run in chrome
-//npm run cy:ui:run -- --browser chrome
-
 // to run in chrome locally without debug
-npm run cy:ui:localrun -- --browser chrome
+npm run cy:ui:run -- --browser chrome
 
 // to run in firefox
 npm run cy:ui:run -- --browser firefox
@@ -67,26 +56,6 @@ npm run cy:ui:run -- --browser edge
 npm run cy:api
 ```
 
-## Generate Reports
-
-As this project deals with both API and UI, reports will be generated differently rather dumping everything into the same file.
-
-```js
-// to generate UI allure reports
-npm run report:ui
-
-// to generate API allure reports
-npm run report:api
-```
-
-## Lint test codes
-
-Linting is a great way to maintain coding standards and quality across the project. Here we use ESLint to ensure the same.
-
-```js
-npm run lint
-```
-
 ## Folder structure
 
 ```bash
@@ -94,10 +63,11 @@ npm run lint
 │   ├── fixtures
 │   ├── integration
 │   │  ├── api
-│   │      ├── **/*.spec.ts
+│   │      ├── features
 │   │  ├── ui
-│   │      ├── pages
-│   │      ├── specs
+│   │      ├── features
+|   |      ├── pages  
+│   │      ├── step_definitions
 │   ├── plugins
 │   ├── support
 ```
@@ -105,12 +75,4 @@ npm run lint
 - _**fixures**_: fixtures are used as external pieces of static data that can be used by your tests. Read more [here](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Fixture-Files)
 - _**plugins**_: plugin file contains the helper libraries to achieve a specific tasks. Different cypress plugins can be found [here](https://docs.cypress.io/plugins/index.html)
 - _**support**_: By default Cypress will automatically include the support file cypress/support/index.js. This file runs before every single spec file.
-- _**integration**_: integration folder contains the actual tests. The ui test scenarios are stored in `ui` folder. `specs` folder contains all test files. `pages` folder contains all page actions. `api` folder contains all api test cases.
-
-## Quick guide to write tests
-
-## Generate reports
-
-Reports will be generated separately for API and UI test cases but will have the same essence of Allure.
-
-![allure-report](./docs/allure-report.png)
+- _**integration**_: integration folder contains the actual tests. The ui test scenarios are stored in `ui` folder. `features` folder contains all cucumber feature files. `pages` folder contains all page objects and corresponding actions. `step_definitions` folder contains all glue/executable code for cucumber feature files. `api` folder contains all api test cases.
