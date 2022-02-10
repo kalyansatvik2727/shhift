@@ -17,9 +17,9 @@ jobs:
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v2
         env:
-          username: ${{ secrets.CYPRESS_USERNAME }}
-          password: ${{ secrets.CYPRESS_PASSWORD }}
-          token: ${{ secrets.CYPRESS_TOKEN }}
+          cypress_username: ${{ secrets.CYPRESS_USERNAME }}
+          cypress_password: ${{ secrets.CYPRESS_PASSWORD }}
+          cypress_token: ${{ secrets.CYPRESS_TOKEN }}
 
       - name: Upload Screenshot Artifacts
         uses: actions/upload-artifact@v1
