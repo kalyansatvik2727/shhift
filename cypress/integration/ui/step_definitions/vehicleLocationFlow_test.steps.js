@@ -1,6 +1,6 @@
 import VehicleLocationPage from '../pages/vehicleLocation_page';
 import VehicleTransfersPage from '../pages/vehicleTransfers_page';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 import DataTableUtils from '../../../support/DataTableUtils';
 
 const {

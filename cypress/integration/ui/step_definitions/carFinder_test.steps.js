@@ -1,5 +1,5 @@
 import { Given, When, Then, After } from 'cypress-cucumber-preprocessor/steps';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 import Utilities from '../pages/utilities';
 const page = require('../pages/carFinder_page');
 // const {

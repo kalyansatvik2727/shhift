@@ -1,4 +1,4 @@
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 const commonActions = new CommonActions();
 
 Given('I navigate to About Page with required login', () => {

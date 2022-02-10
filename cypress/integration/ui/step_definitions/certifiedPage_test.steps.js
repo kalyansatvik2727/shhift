@@ -1,5 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 const commonActions = new CommonActions();
 const page = require('../pages/carLoanCalculator_page');
 const pageActions = page.actions;

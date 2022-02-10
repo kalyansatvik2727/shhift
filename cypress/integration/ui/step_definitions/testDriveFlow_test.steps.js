@@ -1,5 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 import Utilities from '../pages/utilities';
 const page = require('../pages/testDriveFlow_page');
 const pageActions = page.actions;

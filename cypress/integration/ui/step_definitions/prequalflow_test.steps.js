@@ -1,5 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 import Utilities from '../pages/utilities';
 import DataTableUtils from '../../../support/DataTableUtils';
 const page = require('../pages/prequal_page');

@@ -1,5 +1,5 @@
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 const commonActions = new CommonActions();
 
 Given(

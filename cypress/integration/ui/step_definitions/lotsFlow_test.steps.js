@@ -1,6 +1,6 @@
 import LotsPage from '../pages/lots_page';
 import LotDetailsPage from '../pages/lotDetails_page';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 import DataTableUtils from '../../../support/DataTableUtils';
 
 const {

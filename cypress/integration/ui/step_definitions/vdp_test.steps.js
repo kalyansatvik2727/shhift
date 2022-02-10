@@ -1,5 +1,5 @@
 import VDPPage from '../pages/vdp_page';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 
 
 const {

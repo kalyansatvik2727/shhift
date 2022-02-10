@@ -1,6 +1,6 @@
 import WalkInApptPage from '../pages/walkInAppt_page';
 import HomePage from '../pages/home_page';
-import CommonActions from '../pages/commonActions';
+import CommonActions from '../pages/CommonActions';
 import DataTableUtils from '../../../support/DataTableUtils';
 
 const {
