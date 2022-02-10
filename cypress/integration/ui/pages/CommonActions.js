@@ -5,7 +5,7 @@ class CommonActions {
     cy.visit(
       Cypress.env('baseUrl') + '/admin/devops/crypto/refresh_token_login'
     );
-    var token = Cypress.env('token');
+    var token = `${Cypress.env('token')}`;
 
     cy.get('input[name=auth_token]').type(token, { log: false });
     cy.get('form').submit();
