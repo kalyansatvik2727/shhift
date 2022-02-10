@@ -2,7 +2,10 @@ name: Shft Cypress Tests
 
 # on push for testing, will change to on schedule
 on: 
-   
+  pull request:
+  push:
+    branches:
+      - master   
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
