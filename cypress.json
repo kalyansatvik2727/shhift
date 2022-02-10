@@ -18,5 +18,5 @@
   "ignoreTestFiles": "*._feature",
   "integrationFolder": "cypress/integration/",
   "testFiles": "**/*.feature",
-  "projectId": "zqxn7c"
+  "projectId": "9b7b64"
 }
