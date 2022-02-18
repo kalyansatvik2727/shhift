@@ -1,7 +1,7 @@
 {
   "userAgent": "dpxdt-ZHGr3FnW8JnEu6ppR207j53p82koykKe",
   "env": {
-    "baseUrl": "http://staging.shift.com",
+    "baseUrl": "https://forcebase1.a.shiftdev.io",
     "username": "",
     "password": "",
     "token": "",

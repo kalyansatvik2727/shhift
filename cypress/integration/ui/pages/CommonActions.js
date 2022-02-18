@@ -28,6 +28,18 @@ class CommonActions {
     }
   }
 
+  stageLogin(relativeUrl) {
+    cy.log(Cypress.env('baseUrl'))
+    cy.log(Cypress.env('username'))
+    cy.log(Cypress.env('password'))
+    cy.visit(`${Cypress.env('baseUrl')}${relativeUrl}`,{
+      auth: {
+        username: Cypress.env('username'),
+        password: Cypress.env('password')
+      }
+    })
+  }
+
   verifyText(text){
     cy.contains(text)
   }

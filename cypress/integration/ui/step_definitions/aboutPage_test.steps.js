@@ -2,7 +2,8 @@ import CommonActions from '../pages/CommonActions';
 const commonActions = new CommonActions();
 
 Given('I navigate to About Page with required login', () => {
-  commonActions.envLogin('/about');
+  // commonActions.envLogin('/about');
+  commonActions.stageLogin('/about');
 });
 
 When('I validate About landing page text', () => {
